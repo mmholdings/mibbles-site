@@ -1,0 +1,22 @@
+MIBBLES BRAND COLORS
+================================================================
+
+PRIMARY
+-------
+Cream         #FAFAF7   (background)
+Ink           #1A1A1A   (primary text)
+Terracotta    #E27D5F   (accent)
+
+EXTENDED PALETTE
+----------------
+Cream-200     #F2F1EC   (subtle section backgrounds)
+Ink-700       #2A2A2A   (secondary text)
+Ink-500       #5C5C5C   (tertiary text)
+Terracotta-50 #FBF1ED   (light accent backgrounds)
+Terracotta-700 #A24A2C  (active accent text)
+
+USAGE
+-----
+- Body text always on cream or cream-200.
+- Terracotta is for accents, eyebrows, and small CTAs. Never for body type.
+- The ink-900 background is for "dark mode" sections (pricing CTA, footer-adjacent).

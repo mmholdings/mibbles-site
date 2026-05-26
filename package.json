@@ -1,0 +1,56 @@
+{
+  "name": "mibbles-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marketing website for Mibbles — an iOS app for cat wellness and mental enrichment.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3000}",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "postbuild": "next-sitemap",
+    "generate:post": "tsx scripts/generate-post.ts",
+    "generate:seed": "tsx scripts/generate-seed-posts.ts",
+    "package:press-kit": "tsx scripts/package-press-kit.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "@vercel/og": "^0.6.3",
+    "clsx": "^2.1.1",
+    "contentlayer2": "^0.5.3",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.453.0",
+    "next": "14.2.15",
+    "next-contentlayer2": "^0.5.3",
+    "next-sitemap": "^4.2.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "^7.53.1",
+    "reading-time": "^1.5.0",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-pretty-code": "^0.14.0",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.0",
+    "tailwind-merge": "^2.5.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/node": "^22.7.5",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.0",
+    "archiver": "^7.0.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.15",
+    "openai": "^4.68.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

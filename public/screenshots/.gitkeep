@@ -1,0 +1,9 @@
+# Drop iPhone 15 Pro screenshots in here.
+# Expected files (referenced from app/features/page.tsx and app/page.tsx):
+#   cat-mode.png      — Cat TV running, full bleed
+#   cat-cam.png       — Cat Cam viewing screen
+#   profile.png       — A cat profile screen
+#   insights.png      — Wellness insights screen
+#   onboarding.png    — Onboarding lesson
+#   widgets.png       — Home Screen widgets
+# Recommended size: 1290×2796 (iPhone 15 Pro).

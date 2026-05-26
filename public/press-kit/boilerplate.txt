@@ -1,0 +1,30 @@
+MIBBLES — PRESS BOILERPLATE
+================================================================
+
+ONE-LINER
+---------
+Mibbles is the iOS app for cat mental health, enrichment, and wellness — Cat
+TV, Cat Cam, and science-backed insights, built with feline behaviorists.
+
+SHORT BOILERPLATE (50 words)
+----------------------------
+Mibbles is the iOS app for cat mental wellness. Founded in 2024 and based in
+Brooklyn, New York, Mibbles combines feline behavioral research with a calm,
+modern app experience to help indoor cats live richer mental lives. Core
+features include Cat TV, Cat Cam, and personalized wellness insights.
+
+LONG BOILERPLATE (110 words)
+----------------------------
+Mibbles is the iOS app for cat mental wellness. Founded in 2024 and based in
+Brooklyn, New York, Mibbles combines feline behavioral research with a calm,
+modern app experience to help indoor cats live richer mental lives. Core
+features include Cat TV (full-screen visual and audio enrichment), Cat Cam (a
+private camera for remote check-ins, with all video stored locally on-device),
+and personalized wellness insights drawn from peer-reviewed feline welfare
+research. Mibbles is built with input from certified cat behavior consultants
+and is available on the App Store with a 7-day free trial.
+
+PRESS CONTACT
+-------------
+press@mibbles.app
+Same-day response, weekdays Eastern Time.

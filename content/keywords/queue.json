@@ -1,0 +1,130 @@
+[
+  {
+    "primaryKeyword": "cat tv for cats",
+    "secondaryKeywords": ["cat tv app", "youtube for cats", "screen time for cats"],
+    "intent": "commercial",
+    "category": "Enrichment",
+    "targetWordCount": 1600,
+    "internalLinks": ["cat-tv", "how-long-should-cats-watch-cat-tv"]
+  },
+  {
+    "primaryKeyword": "videos for cats to watch",
+    "secondaryKeywords": ["bird videos for cats", "fish videos for cats", "squirrel videos for cats"],
+    "intent": "informational",
+    "category": "Enrichment",
+    "targetWordCount": 1500,
+    "internalLinks": ["cat-tv", "best-cat-tv-channels"]
+  },
+  {
+    "primaryKeyword": "youtube for cats",
+    "secondaryKeywords": ["videos for cats to watch", "cat tv youtube", "cat tv channels"],
+    "intent": "informational",
+    "category": "Enrichment",
+    "targetWordCount": 1400
+  },
+  {
+    "primaryKeyword": "best cat tv channels",
+    "secondaryKeywords": ["bird channel for cats", "fish channel for cats", "calm scenes for cats"],
+    "intent": "commercial",
+    "category": "Enrichment",
+    "targetWordCount": 1600
+  },
+  {
+    "primaryKeyword": "bird videos for cats",
+    "secondaryKeywords": ["window bird feeders for cats", "best bird videos cat tv"],
+    "intent": "informational",
+    "category": "Enrichment",
+    "targetWordCount": 1400
+  },
+  {
+    "primaryKeyword": "fish videos for cats",
+    "secondaryKeywords": ["aquarium for cats", "best fish video cat tv"],
+    "intent": "informational",
+    "category": "Enrichment",
+    "targetWordCount": 1400
+  },
+  {
+    "primaryKeyword": "squirrel videos for cats",
+    "secondaryKeywords": ["small prey videos for cats", "movement videos for cats"],
+    "intent": "informational",
+    "category": "Enrichment",
+    "targetWordCount": 1300
+  },
+  {
+    "primaryKeyword": "cat tv while at work",
+    "secondaryKeywords": ["entertain cat alone", "leaving cat home alone with tv"],
+    "intent": "informational",
+    "category": "How-To",
+    "targetWordCount": 1500
+  },
+  {
+    "primaryKeyword": "screen time for cats",
+    "secondaryKeywords": ["how long should cats watch tv", "screens and cats"],
+    "intent": "informational",
+    "category": "Behavior",
+    "targetWordCount": 1500
+  },
+  {
+    "primaryKeyword": "do cats like watching tv",
+    "secondaryKeywords": ["why do cats watch tv", "cats and screens"],
+    "intent": "informational",
+    "category": "Behavior",
+    "targetWordCount": 1400
+  },
+  {
+    "primaryKeyword": "cat mental health",
+    "secondaryKeywords": ["cat wellbeing", "indoor cat psychology"],
+    "intent": "informational",
+    "category": "Mental Health",
+    "targetWordCount": 2200
+  },
+  {
+    "primaryKeyword": "how to tell if my cat is stressed",
+    "secondaryKeywords": ["cat stress signs", "calming a stressed cat"],
+    "intent": "informational",
+    "category": "Behavior",
+    "targetWordCount": 1700
+  },
+  {
+    "primaryKeyword": "enrichment for indoor cats",
+    "secondaryKeywords": ["indoor cat enrichment ideas", "mental stimulation for cats"],
+    "intent": "informational",
+    "category": "Enrichment",
+    "targetWordCount": 2000
+  },
+  {
+    "primaryKeyword": "how to keep an indoor cat happy",
+    "secondaryKeywords": ["indoor cat tips", "happy indoor cat"],
+    "intent": "informational",
+    "category": "How-To",
+    "targetWordCount": 1800
+  },
+  {
+    "primaryKeyword": "how to entertain a cat alone",
+    "secondaryKeywords": ["leaving cat home alone", "cat home alone activities"],
+    "intent": "informational",
+    "category": "How-To",
+    "targetWordCount": 1600
+  },
+  {
+    "primaryKeyword": "how to monitor your cat remotely",
+    "secondaryKeywords": ["cat camera iphone", "check on cat from work"],
+    "intent": "informational",
+    "category": "How-To",
+    "targetWordCount": 1500
+  },
+  {
+    "primaryKeyword": "why does my cat stare at me",
+    "secondaryKeywords": ["cat behavior", "cat body language"],
+    "intent": "informational",
+    "category": "Behavior",
+    "targetWordCount": 1400
+  },
+  {
+    "primaryKeyword": "best apps for cat owners",
+    "secondaryKeywords": ["cat owner apps 2026", "iphone apps for cats"],
+    "intent": "commercial",
+    "category": "Trends",
+    "targetWordCount": 1700
+  }
+]
