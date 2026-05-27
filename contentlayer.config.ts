@@ -15,7 +15,7 @@ export const Post = defineDocumentType(() => ({
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
-    description: { type: "string", required: true },
+    description: { type: "string", required: false },
     metaTitle: { type: "string", required: false },
     metaDescription: { type: "string", required: false },
     primaryKeyword: { type: "string", required: true },
