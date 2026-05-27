@@ -4,18 +4,12 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkGfm from "remark-gfm";
 import readingTime from "reading-time";
 
-const FAQItem = {
-  question: { type: "string", required: true },
-  answer: { type: "string", required: true },
-};
-
 export const Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: "blog/**/*.mdx",
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
-    description: { type: "string", required: false },
     metaTitle: { type: "string", required: false },
     metaDescription: { type: "string", required: false },
     primaryKeyword: { type: "string", required: true },
@@ -46,6 +40,17 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       resolve: (post) => `/blog/${post._raw.flattenedPath.replace(/^blog\//, "")}`,
     },
+    // description always exists: falls back to metaDescription, then a snippet of the body.
+    description: {
+      type: "string",
+      resolve: (post) => {
+        if (post.metaDescription) return post.metaDescription;
+        const firstPara = post.body.raw
+          .split(/\n\s*\n/)
+          .find((p) => p.trim() && !p.trim().startsWith("---") && !p.trim().startsWith("<"));
+        return (firstPara || post.title).slice(0, 160);
+      },
+    },
     readingTime: {
       type: "json",
       resolve: (post) => readingTime(post.body.raw),
@@ -72,7 +77,8 @@ export const Post = defineDocumentType(() => ({
 }));
 
 export default makeSource({
-  contentDirPath: "content", contentDirExclude: ["keywords"],
+  contentDirPath: "content",
+  contentDirExclude: ["keywords"],
   documentTypes: [Post],
   mdx: {
     remarkPlugins: [remarkGfm],
