@@ -85,8 +85,19 @@ export function LiveCanvas({ debug = false, showBranding = true, fill = "viewpor
     };
     const hb = setInterval(sendHeartbeat, 2000);
 
-    const onVis = () => { last = performance.now(); };
+    // Chrome suspends requestAnimationFrame in hidden/background tabs. Keep the
+    // world stepping on a timer so it never freezes or "jumps" when it returns.
+    let hiddenTimer: ReturnType<typeof setInterval> | null = null;
+    const onVis = () => {
+      last = performance.now();
+      if (document.hidden && !hiddenTimer) {
+        hiddenTimer = setInterval(() => { world.step(1 / 30); }, 1000 / 30);
+      } else if (!document.hidden && hiddenTimer) {
+        clearInterval(hiddenTimer); hiddenTimer = null;
+      }
+    };
     document.addEventListener("visibilitychange", onVis);
+    onVis();
 
     return () => {
       cancelAnimationFrame(raf);
@@ -94,6 +105,7 @@ export function LiveCanvas({ debug = false, showBranding = true, fill = "viewpor
       window.removeEventListener("resize", resize);
       ro?.disconnect();
       document.removeEventListener("visibilitychange", onVis);
+      if (hiddenTimer) clearInterval(hiddenTimer);
       offEvent();
       bus.stop();
     };
