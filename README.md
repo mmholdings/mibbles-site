@@ -317,3 +317,34 @@ The dashboard is a static shell. Wire it up to:
 ## License
 
 This repo is private. Brand assets belong to Mibbles.
+
+---
+
+## Mibbles LIVE (`/live`)
+
+A continuously rendered, autonomous, TikTok-reactive world for cats. Canvas 2D, 9:16, no video files.
+
+| Route | Purpose |
+|---|---|
+| `/live` | Public broadcast surface. Open full-screen in a browser on the broadcast PC; capture with TikTok LIVE Studio. No nav/footer/cursor. |
+| `/live/admin` | Control panel (basic auth, same `ADMIN_USER`/`ADMIN_PASSWORD`). Manual events, world controls, live tuning, TikTok traffic simulator, health readout, phone-shaped preview with TikTok overlay safe areas. |
+
+**How events flow**
+
+```
+TikTok connector ─┐
+Admin panel ──────┼─▶ Supabase Realtime broadcast ("mibbles-live") ─▶ /live page ─▶ world.ingest()
+Simulator ────────┘         (plus BroadcastChannel when admin + live share one browser)
+```
+
+The engine (`lib/live/engine.ts`) only ever sees normalized `MibblesEvent`s. It never knows about TikTok.
+
+**Env (Railway):** `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` (the *publishable* key — broadcast channels only, no tables). Without them, `/live` still runs fully autonomously and the admin panel works within the same browser.
+
+**Broadcast PC setup:** Chrome/Edge → `https://<site>/live` → F11 full-screen → TikTok LIVE Studio "Window capture" at 720×1280 or 1080×1920, 30 fps. Leave it running.
+
+**TikTok connector:** `npm run live:connector` with `TIKTOK_USERNAME` + `TIKTOK_PROVIDER`. Providers live in `scripts/providers/` (none bundled — see the README there). The game never depends on a specific provider.
+
+**Tuning:** every threshold, cooldown, cap and rate in `lib/live/config.ts` can be changed live from `/live/admin` → Tuning. Defaults are conservative; watch a real LIVE, then tune.
+
+**Acceptance tests** (spec §36) map 1:1 to the simulator scenarios in `/live/admin`: No traffic → autonomous; Slow/Rapid likes → aggregation; Comment/Follow burst; Small gifts / Gift streak; Large gift → Mayhem; Viral + Stress → population caps hold, FPS stays up.

@@ -6,7 +6,7 @@ import type { NextRequest } from "next/server";
  */
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  if (!pathname.startsWith("/admin")) return NextResponse.next();
+  if (!pathname.startsWith("/admin") && !pathname.startsWith("/live/admin")) return NextResponse.next();
 
   const auth = request.headers.get("authorization");
   const expectedUser = process.env.ADMIN_USER ?? "admin";
@@ -30,5 +30,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/admin/:path*", "/live/admin/:path*"],
 };

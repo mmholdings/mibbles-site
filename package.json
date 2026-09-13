@@ -12,7 +12,8 @@
     "postbuild": "next-sitemap",
     "generate:post": "tsx scripts/generate-post.ts",
     "generate:seed": "tsx scripts/generate-seed-posts.ts",
-    "package:press-kit": "tsx scripts/package-press-kit.ts"
+    "package:press-kit": "tsx scripts/package-press-kit.ts",
+    "live:connector": "tsx scripts/tiktok-connector.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",

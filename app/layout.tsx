@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { Nav } from "@/components/marketing/nav";
 import { Footer } from "@/components/marketing/footer";
 import { StickyAppCTA } from "@/components/marketing/sticky-app-cta";
+import { SiteChrome } from "@/components/marketing/site-chrome";
 import { Analytics } from "@/components/seo/analytics";
 import { OrganizationSchema } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
@@ -87,10 +88,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body className="min-h-screen flex flex-col bg-cream text-ink-900">
         <OrganizationSchema />
-        <Nav />
+        <SiteChrome><Nav /></SiteChrome>
         <main className="flex-1">{children}</main>
-        <Footer />
-        <StickyAppCTA />
+        <SiteChrome><Footer /><StickyAppCTA /></SiteChrome>
         <Analytics />
       </body>
     </html>
