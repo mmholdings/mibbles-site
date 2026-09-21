@@ -25,7 +25,7 @@ export const siteConfig = {
   links: {
     twitter: "https://twitter.com/mibblesapp",
     instagram: "https://instagram.com/mibblesapp",
-    tiktok: "https://tiktok.com/@mibblesapp",
+    tiktok: "https://tiktok.com/@mibblecat",
   },
   nav: [
     { label: "Features", href: "/features" },

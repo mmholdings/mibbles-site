@@ -38,12 +38,12 @@ export default function DownloadPage() {
             <span className="font-serif text-2xl font-semibold tracking-tight">Mibbles</span>
           </Link>
           <a
-            href="https://tiktok.com/@mibblesapp"
+            href="https://tiktok.com/@mibblecat"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full border border-black/10 bg-white/70 px-4 py-2 text-xs font-semibold backdrop-blur"
           >
-            @mibblesapp
+            @mibblecat
           </a>
         </header>
 
