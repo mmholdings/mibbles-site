@@ -3,63 +3,136 @@ import { Container, Section, Eyebrow } from "@/components/ui/container";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Mibbles handles your data — short version: we collect as little as possible.",
+  description: "How Mibbles collects, uses, and protects information in the app and on this website.",
 };
 
 export default function PrivacyPage() {
   return (
     <Section className="pt-16 md:pt-24">
       <Container size="sm">
-        <Eyebrow>Last updated · January 2026</Eyebrow>
+        <Eyebrow>Last updated · September 20, 2026</Eyebrow>
         <h1 className="font-serif text-display-xl mt-4 mb-6">Privacy Policy</h1>
 
         <div className="prose prose-lg max-w-none">
           <p className="lead">
-            We built Mibbles to collect as little data as possible. This page
-            explains exactly what we do and don&apos;t collect — written in
-            plain English. The legal version is at the bottom for completeness.
+            Mibbles is designed to keep most personal information on your device.
+            This policy explains what the Mibbles iOS app and mibbles.app collect,
+            why we use it, and the choices available to you.
           </p>
 
-          <h2>What we collect</h2>
+          <h2>Information used by the iOS app</h2>
           <ul>
-            <li><strong>Account email</strong> — only if you create one for newsletter signup or support. Stored with our email provider.</li>
-            <li><strong>Anonymous app usage</strong> — which screens you visit and which buttons you tap, so we can improve the app. No personally identifying information.</li>
-            <li><strong>Crash reports</strong> — when the app crashes, we receive a stack trace via Apple&apos;s built-in TestFlight / App Store Connect tooling.</li>
+            <li>
+              <strong>Account and profile information.</strong> If you use Sign in
+              with Apple, Apple may provide an account identifier and, depending on
+              your choices, your name or relay email address. Your Mibbles profile,
+              cat profiles, preferences, progress, and play history are stored on
+              your device.
+            </li>
+            <li>
+              <strong>Purchases and subscriptions.</strong> Apple processes payments.
+              RevenueCat receives an anonymous app user identifier, purchase history,
+              receipt information, entitlement status, and limited device information
+              so that Mibbles can offer, validate, restore, and analyze subscriptions.
+              Mibbles does not receive your full payment-card details.
+            </li>
+            <li>
+              <strong>Camera, photos, and replays.</strong> Camera access is used only
+              when you choose Cat Cam or recording features. Video, photos, and cat
+              profile images remain on your device or in your photo library unless
+              you choose to share or export them. Mibbles does not upload Cat Cam
+              video to its servers.
+            </li>
+            <li>
+              <strong>Diagnostics.</strong> Apple may provide aggregated crash and
+              performance information through App Store Connect or TestFlight when
+              you have allowed Apple to share it with developers.
+            </li>
           </ul>
 
-          <h2>What we don&apos;t collect</h2>
+          <h2>Information collected on this website</h2>
           <ul>
-            <li><strong>Cat Cam video.</strong> Ever. It stays on your device.</li>
-            <li><strong>Your name, address, phone number, or contacts.</strong></li>
-            <li><strong>Location data.</strong> Mibbles never asks for it.</li>
-            <li><strong>Cat profile photos.</strong> They live on your device.</li>
+            <li>
+              <strong>Newsletter and waitlist.</strong> If you subscribe, we collect
+              your email address and the signup source. This information is stored
+              with our database and email-service providers.
+            </li>
+            <li>
+              <strong>Support and contact requests.</strong> We collect the name,
+              email address, subject, and message you submit so we can respond.
+            </li>
+            <li>
+              <strong>Website analytics and logs.</strong> We may receive limited
+              device, browser, page-view, and server-log information through our
+              hosting and analytics providers. Where used, analytics are configured
+              to minimize identifying information.
+            </li>
           </ul>
 
-          <h2>Third-party services</h2>
-          <p>We use these vendors and only share the minimum data needed for them to function:</p>
-          <ul>
-            <li><strong>RevenueCat</strong> — manages subscriptions.</li>
-            <li><strong>Plausible / Google Analytics</strong> — anonymous web analytics for this site.</li>
-            <li><strong>Resend</strong> — sending newsletter and support emails.</li>
-          </ul>
-
-          <h2>Your rights</h2>
+          <h2>How we use information</h2>
           <p>
-            You can delete your account from Settings → Account → Delete
-            account at any time. We&apos;ll remove your data within 30 days.
-            EU and California residents have additional rights under GDPR
-            and CCPA — email <a href="mailto:privacy@mibbles.app">privacy@mibbles.app</a>.
+            We use information to provide and secure Mibbles, remember your settings,
+            process and restore subscriptions, answer support requests, operate the
+            website and newsletter, diagnose problems, and understand how our
+            products perform. We do not sell personal information or use it for
+            third-party advertising.
+          </p>
+
+          <h2>Service providers</h2>
+          <p>
+            We share only the information necessary for vendors to perform services
+            for us. These providers include Apple (distribution, Sign in with Apple,
+            payments, and diagnostics), RevenueCat (subscription management),
+            Supabase (website newsletter storage), Resend (email delivery), Railway
+            (website hosting), and Plausible or Google Analytics when enabled for
+            website analytics. Their handling of information is governed by their
+            own terms and privacy policies.
+          </p>
+
+          <h2>Retention and deletion</h2>
+          <p>
+            You can delete your Mibbles account and on-device app data from
+            Settings → Account → Delete Account. Deleting the app does not cancel an
+            Apple subscription; subscriptions can be managed in your Apple ID
+            settings. To request deletion of newsletter, support, or other website
+            information, email <a href="mailto:privacy@mibbles.app">privacy@mibbles.app</a>.
+            We retain information only as long as reasonably necessary for the uses
+            described here and for legal, security, or accounting obligations.
+          </p>
+
+          <h2>Your choices and rights</h2>
+          <p>
+            You may decline optional permissions such as camera or photo-library
+            access, unsubscribe from marketing emails, and request access,
+            correction, or deletion of personal information we control. Depending
+            on where you live, additional rights may apply. We will not discriminate
+            against you for exercising a privacy right.
+          </p>
+
+          <h2>Children</h2>
+          <p>
+            Mibbles is intended for adult cat owners and is not directed to children
+            under 13. We do not knowingly collect personal information from children.
+          </p>
+
+          <h2>Security and international processing</h2>
+          <p>
+            We use reasonable administrative and technical safeguards, but no method
+            of storage or transmission is completely secure. Our providers may
+            process information in the United States and other countries where they
+            operate.
+          </p>
+
+          <h2>Changes to this policy</h2>
+          <p>
+            We may update this policy as Mibbles changes. The date at the top shows
+            when it was last revised. Material changes will be posted on this page.
           </p>
 
           <h2>Contact</h2>
           <p>
-            Privacy questions: <a href="mailto:privacy@mibbles.app">privacy@mibbles.app</a>.
-          </p>
-
-          <hr />
-          <p className="text-sm text-ink-500">
-            [Insert full legal privacy policy text here — generated via a service
-            like Termly or written by your attorney.]
+            Questions or privacy requests can be sent to{" "}
+            <a href="mailto:privacy@mibbles.app">privacy@mibbles.app</a>.
           </p>
         </div>
       </Container>
