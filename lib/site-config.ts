@@ -7,8 +7,8 @@ export const siteConfig = {
   ogImage: "/og-default.png",
   appStoreUrl:
     process.env.NEXT_PUBLIC_APP_STORE_URL ??
-    "https://apps.apple.com/app/mibbles/idXXXXXXXXX",
-  appStoreId: process.env.NEXT_PUBLIC_APP_STORE_ID ?? "XXXXXXXXX",
+    "https://apps.apple.com/app/id6770523158",
+  appStoreId: process.env.NEXT_PUBLIC_APP_STORE_ID ?? "6770523158",
   // Pre-launch. Real numbers added when the app ships.
   launching: true,
   pricing: {
@@ -32,6 +32,7 @@ export const siteConfig = {
     { label: "Pricing", href: "/pricing" },
     { label: "Blog", href: "/blog" },
     { label: "About", href: "/about" },
+    { label: "Download", href: "/download" },
   ],
   footerSections: [
     {

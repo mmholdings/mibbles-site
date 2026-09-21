@@ -8,6 +8,6 @@ import { usePathname } from "next/navigation";
  */
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  if (pathname?.startsWith("/live")) return null;
+  if (pathname?.startsWith("/live") || pathname?.startsWith("/download")) return null;
   return <>{children}</>;
 }

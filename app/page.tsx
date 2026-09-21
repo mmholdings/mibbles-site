@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Tv, Camera, Sparkles, ArrowRight, BookOpen } from "lucide-react";
 import { Container, Section, Eyebrow } from "@/components/ui/container";
 import { AppStoreButton } from "@/components/ui/app-store-button";
-import { IPhoneMockup } from "@/components/ui/iphone-mockup";
+import { MibblesOnboardingPreview } from "@/components/ui/mibbles-onboarding-preview";
 import { Card } from "@/components/ui/card";
 import { FeatureCard } from "@/components/marketing/feature-card";
 import { TestimonialCarousel } from "@/components/marketing/testimonial-carousel";
@@ -94,10 +94,7 @@ export default function HomePage() {
               <div className="absolute inset-0 -z-10 flex items-center justify-center">
                 <div className="w-[420px] h-[420px] rounded-full bg-terracotta-50 blur-2xl" />
               </div>
-              <IPhoneMockup
-                src="/screenshots/cat-mode.png"
-                alt="Mibbles app showing Cat Mode with birds on screen"
-              />
+              <MibblesOnboardingPreview />
             </div>
           </div>
         </Container>
@@ -252,7 +249,7 @@ export default function HomePage() {
       </Section>
 
       {/* ─────────────────────────── NEWSLETTER ─────────────────────────── */}
-      <Section className="bg-cream-200">
+      <Section id="waitlist" className="scroll-mt-24 bg-cream-200">
         <Container size="md">
           <div className="text-center max-w-2xl mx-auto">
             <BookOpen className="h-8 w-8 mx-auto mb-4 text-terracotta-600" strokeWidth={1.5} />
