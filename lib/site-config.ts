@@ -9,6 +9,9 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_APP_STORE_URL ??
     "https://apps.apple.com/app/id6770523158",
   appStoreId: process.env.NEXT_PUBLIC_APP_STORE_ID ?? "6770523158",
+  googlePlayUrl:
+    process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL ??
+    "https://play.google.com/store/apps/details?id=app.rork.4z9riky51dy4223vpp3gb",
   // Pre-launch. Real numbers added when the app ships.
   launching: true,
   pricing: {
@@ -25,7 +28,7 @@ export const siteConfig = {
   links: {
     twitter: "https://twitter.com/mibblesapp",
     instagram: "https://instagram.com/mibblesapp",
-    tiktok: "https://tiktok.com/@mibblecat",
+    tiktok: "https://tiktok.com/@mibblescat",
   },
   nav: [
     { label: "Features", href: "/features" },
