@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Container, Section, Eyebrow } from "@/components/ui/container";
 import { AppStoreButton } from "@/components/ui/app-store-button";
 import { BreadcrumbSchema } from "@/components/seo/json-ld";
@@ -29,7 +30,7 @@ export default function AboutPage() {
         <Container size="md">
           <Eyebrow>About</Eyebrow>
           <h1 className="font-serif text-display-2xl mt-5 mb-6 text-balance">
-            We build the app we wished existed for our own cats.
+            Mibbles started with a bored cat named Suki.
           </h1>
         </Container>
       </Section>
@@ -38,16 +39,15 @@ export default function AboutPage() {
         <Container size="sm">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-ink-700 leading-snug">
-              Mibbles started in a New York apartment with a bored cat named
-              Olive. Her humans worked long hours, the windows looked onto a
-              brick wall, and the closest thing to enrichment was a laser
-              pointer they were always too tired to use. There had to be a
-              better way.
+              Mibbles started in a small apartment with a bored cat named Suki.
+              Her humans worked long hours, and the closest thing to enrichment
+              was a cat toy wand that they were always too tired to use. There
+              had to be a better way.
             </p>
 
             <h2>The mission</h2>
             <p>
-              Indoor cats live longer than outdoor cats — but they live in
+              Indoor cats live longer than outdoor cats but they live in
               dramatically less stimulating environments. Veterinary behaviorists
               have spent two decades quietly building consensus that
               environmental enrichment is one of the single most impactful
@@ -55,71 +55,46 @@ export default function AboutPage() {
               tools, mostly, aren&apos;t.
             </p>
             <p>
-              We&apos;re building Mibbles to close that gap — to take the
+              We&apos;re building Mibbles to close that gap and to take the
               best of feline welfare research and turn it into something a
               cat parent can use in 30 seconds on a weekday morning.
-            </p>
-
-            <h2>The science</h2>
-            <p>
-              We work with certified cat behavior consultants and consult the
-              peer-reviewed literature when we ship anything that touches a
-              cat&apos;s routine. We won&apos;t cite a study unless we can link
-              it. We won&apos;t recommend something the research doesn&apos;t
-              support. And we&apos;ll always defer to your vet for medical
-              questions.
-            </p>
-
-            <h2>The team</h2>
-            <p>
-              Mibbles is built by a small team based in Brooklyn, New York,
-              and Toronto. We&apos;ve shipped at Apple, Headspace, and a
-              handful of small startups you&apos;ve probably never heard of.
-              Between us we have six cats and approximately too many cat hairs
-              on every laptop.
-            </p>
-
-            <h2>What we won&apos;t do</h2>
-            <p>
-              We won&apos;t sell your data. We won&apos;t recommend that you
-              leave a screen on for your cat all day. We won&apos;t diagnose
-              your cat&apos;s health. We won&apos;t use a single image of a
-              cat on this site that we don&apos;t have the rights to. And we
-              won&apos;t ship anything we wouldn&apos;t use with our own cats.
             </p>
           </div>
         </Container>
       </Section>
 
-      {/* Founder card */}
-      <Section className="bg-cream-200">
+      <Section className="overflow-hidden bg-cream-200 pb-0">
         <Container size="md">
-          <div className="grid md:grid-cols-3 gap-10 items-start">
-            <div className="md:col-span-1">
-              <div className="aspect-square rounded-2xl bg-ink-200 grid place-items-center text-ink-500">
-                {/* Replace with founder headshot in /public/images/founder.jpg */}
-                <span className="font-serif text-2xl">Founder photo</span>
-              </div>
-            </div>
-            <div className="md:col-span-2">
-              <Eyebrow>Founder</Eyebrow>
-              <h2 className="font-serif text-3xl mt-3 mb-4">[Founder Name]</h2>
-              <p className="text-ink-700 leading-relaxed mb-4">
-                [Founder bio paragraph goes here — 80–120 words on their
-                background, how Mibbles started, and why cat welfare is the
-                hill they&apos;re willing to die on. Replace this placeholder
-                with the real bio.]
-              </p>
-              <p className="text-ink-700 leading-relaxed">
-                Reach out at{" "}
-                <a href="mailto:hello@mibbles.app" className="text-terracotta-700 underline underline-offset-4">
-                  hello@mibbles.app
-                </a>
-                .
-              </p>
-            </div>
-          </div>
+          <Eyebrow>Our team</Eyebrow>
+          <h2 className="mt-3 mb-5 font-serif text-3xl text-balance md:text-4xl">
+            Just a tiny team of Cat Lovers
+          </h2>
+          <p className="max-w-3xl text-ink-700 leading-relaxed mb-4">
+            Mibbles is run by our small team based in Florida. We&apos;ve shipped
+            at a handful of small startups you&apos;ve probably never heard of. We
+            combined our passion in business, healthcare and our love for animals
+            to create Mibbles. We are working hard to improve, and make Mibbles
+            more stimulating for cats every day.
+          </p>
+          <p className="text-ink-700 leading-relaxed">
+            Reach out at{" "}
+            <a href="mailto:hello@mibbles.app" className="text-terracotta-700 underline underline-offset-4">
+              hello@mibbles.app
+            </a>
+            .
+          </p>
         </Container>
+
+        <div className="relative mx-auto mt-8 aspect-[3/1] w-full max-w-[1440px] sm:mt-10">
+          <Image
+            src="/images/founders-banner.png"
+            alt="The Mibbles team surrounded by cats"
+            fill
+            sizes="(max-width: 1440px) 100vw, 1440px"
+            className="object-cover object-center"
+          />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-[32%] bg-gradient-to-b from-cream-200 via-cream-200/65 to-transparent" />
+        </div>
       </Section>
 
       <Section>
