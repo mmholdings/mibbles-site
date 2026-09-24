@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Newsletter } from "@/components/marketing/newsletter";
@@ -9,12 +10,13 @@ export function Footer() {
       <Container className="py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2 max-w-md">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="h-8 w-8 rounded-xl bg-ink-900 flex items-center justify-center">
-                <span className="text-cream font-serif font-semibold">M</span>
-              </div>
-              <span className="font-serif text-xl font-semibold">{siteConfig.name}</span>
-            </div>
+            <Image
+              src="/images/mibbles-wordmark.png"
+              alt="Mibbles"
+              width={1987}
+              height={607}
+              className="mb-5 h-12 w-auto"
+            />
             <p className="text-ink-600 leading-relaxed mb-6">
               {siteConfig.description}
             </p>

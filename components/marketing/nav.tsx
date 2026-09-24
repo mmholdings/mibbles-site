@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -33,14 +34,15 @@ export function Nav() {
     >
       <div className="mx-auto max-w-content px-5 sm:px-6 lg:px-8">
         <div className="flex h-16 md:h-20 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group" aria-label="Mibbles home">
-            <div className="h-8 w-8 rounded-xl bg-ink-900 flex items-center justify-center group-hover:bg-terracotta-500 transition-colors">
-              {/* Replace with /public/logo.svg when you have it */}
-              <span className="text-cream font-serif text-base font-semibold">M</span>
-            </div>
-            <span className="font-serif text-xl font-semibold tracking-tight">
-              {siteConfig.name}
-            </span>
+          <Link href="/" className="group" aria-label="Mibbles home">
+            <Image
+              src="/images/mibbles-wordmark.png"
+              alt="Mibbles"
+              width={1987}
+              height={607}
+              priority
+              className="h-9 w-auto transition-transform duration-300 group-hover:scale-[1.02] md:h-10"
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

@@ -39,10 +39,16 @@ export default function DownloadPage() {
 
       <main className="relative mx-auto w-full max-w-[560px] bg-white/45 px-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-[max(1.25rem,env(safe-area-inset-top))] min-[375px]:px-5 sm:px-7 sm:shadow-[0_0_80px_-45px_rgba(16,72,50,.35)]">
         <header className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5" aria-label="Mibbles home">
-            <Image src="/images/app-icon.png" alt="" width={44} height={44} priority className="rounded-[14px] shadow-card" />
+          <Link href="/" className="flex items-center" aria-label="Mibbles home">
             <div>
-              <span className="block text-[24px] font-black leading-none tracking-[-.04em]">Mibbles</span>
+              <Image
+                src="/images/mibbles-wordmark.png"
+                alt="Mibbles"
+                width={1987}
+                height={607}
+                priority
+                className="h-[38px] w-auto"
+              />
               <span className="mt-1 block text-[13px] font-medium text-black/42">@mibblescat</span>
             </div>
           </Link>

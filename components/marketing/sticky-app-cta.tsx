@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { AppStoreButton } from "@/components/ui/app-store-button";
 import { cn } from "@/lib/utils";
 
@@ -27,9 +28,12 @@ export function StickyAppCTA() {
       )}
     >
       <div className="rounded-full bg-cream-50 border border-ink-100 shadow-card flex items-center justify-between gap-3 pl-4 pr-1.5 py-1.5">
-        <div className="text-sm leading-tight">
-          <div className="font-medium text-ink-900">Mibbles</div>
-          <div className="text-ink-500 text-xs">Mental wellness for your cat</div>
+        <div className="flex min-w-0 items-center gap-2.5">
+          <Image src="/images/app-icon.png" alt="" width={40} height={40} className="rounded-[11px]" />
+          <div className="min-w-0 text-sm leading-tight">
+            <div className="font-medium text-ink-900">Mibbles</div>
+            <div className="truncate text-xs text-ink-500">Mental wellness for your cat</div>
+          </div>
         </div>
         <AppStoreButton size="md" />
       </div>
