@@ -11,6 +11,7 @@ from PIL import Image, ImageDraw
 SITE = Path(__file__).resolve().parents[1]
 WORKSPACE = SITE.parent
 APP_ASSETS = WORKSPACE / "mibbles-app-current/ios/MibblesCatTVWellness/Assets.xcassets"
+APPROVED_ICON = SITE / "brand/approved-app-icon.png"
 
 
 def trim(image: Image.Image, padding: int = 0) -> Image.Image:
@@ -99,7 +100,16 @@ def main() -> None:
     save_imageset("BrandWordmark", "wordmark.png", wordmark)
     save_imageset("BrandMark", "mark.png", mark)
 
-    master_icon = make_icon(mark, 1024)
+    if APPROVED_ICON.exists():
+        approved = Image.open(APPROVED_ICON).convert("RGB")
+        side = min(approved.size)
+        left = (approved.width - side) // 2
+        top = (approved.height - side) // 2
+        master_icon = approved.crop((left, top, left + side, top + side)).resize(
+            (1024, 1024), Image.Resampling.LANCZOS
+        )
+    else:
+        master_icon = make_icon(mark, 1024)
     save_png(master_icon, APP_ASSETS / "AppIcon.appiconset/icon.png")
     save_png(master_icon, SITE / "public/images/app-icon.png")
     save_png(master_icon, SITE / "public/press-kit/app-icon.png")
