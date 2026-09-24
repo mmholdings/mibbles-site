@@ -1,107 +1,78 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Tv, Camera, Sparkles, UserPlus, GraduationCap, Clock } from "lucide-react";
+import { Brain, Gamepad2, Heart, Share2 } from "lucide-react";
 import { Container, Section, Eyebrow } from "@/components/ui/container";
 import { AppStoreButton } from "@/components/ui/app-store-button";
-import { IPhoneMockup } from "@/components/ui/iphone-mockup";
 import { BreadcrumbSchema } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "Cat TV, Cat Cam, personalized cat profiles, and wellness insights — every Mibbles feature, explained.",
+    "Explore Mibbles game modes, AI Adaptive play, cat profiles, enrichment tracking, and shareable reaction clips.",
   openGraph: {
-    title: "Features — Mibbles",
+    title: "A happier day for your cat — Mibbles",
     description:
-      "Cat TV, Cat Cam, personalized profiles, wellness insights. Every Mibbles feature, explained.",
-    images: ["/api/og?title=Features&eyebrow=Mibbles"],
+      "Interactive games, personalized play, visible enrichment progress, and reactions worth saving.",
+    images: ["/api/og?title=A%20happier%20day%20for%20your%20cat&eyebrow=Mibbles"],
   },
 };
 
 const features = [
   {
-    icon: Tv,
-    name: "Cat TV",
-    headline: "Channels designed for the feline visual system.",
+    icon: Gamepad2,
+    name: "Play that stays interesting",
+    headline: "A new hunt whenever they are ready.",
     description:
-      "Slow, deliberate movement. Quiet, prey-evoking audio. Bird, fish, squirrel, and calming scenes — built around how cats actually attend to a screen.",
-    bullets: [
-      "Six rotating channels with new content monthly",
-      "Adaptive volume — never startling, always engaging",
-      "AirPlay to your Apple TV for a full-screen session",
-      "Auto-stop timer prevents excessive screen exposure",
+      "Choose from Classic, Beetle Chase, Mouse Dash, Feather Frenzy, Lizard Rush, Bird Flash, water play, and more. Each mode pairs Mibbles' fluid movement with prey designed to hold feline attention.",
+    benefits: [
+      "Every standard game mode is free",
+      "5- and 10-minute sessions included",
+      "Longer and unlimited sessions with Premium",
     ],
-    screenshot: "/screenshots/cat-mode.png",
+    screenshot: "/screenshots/current/games.png",
+    tone: "bg-[#edf9f1]",
   },
   {
-    icon: Camera,
-    name: "Cat Cam",
-    headline: "Turn your iPhone into a private cat camera.",
+    icon: Brain,
+    name: "Play built around your cat",
+    headline: "Tune every session—or let Mibbles learn.",
     description:
-      "Set up an old iPhone in any room and check in remotely. Video stays on your device — no third-party servers, no cloud uploads.",
-    bullets: [
-      "Local-only video — never uploaded",
-      "Motion alerts for when your cat is active",
-      "Two-way audio so you can say hi from the office",
-      "Works with any iPhone running iOS 16+",
+      "Pick the background, texture, session length, and movement speed that gets the best response. AI Adaptive can learn from taps and engagement, then shape future sessions around what your cat enjoys most.",
+    benefits: [
+      "Visual background and texture choices",
+      "Simple speed and session controls",
+      "AI Adaptive is included with Premium",
     ],
-    screenshot: "/screenshots/cat-cam.png",
+    screenshot: "/screenshots/current/personalized.png",
+    tone: "bg-[#f4efff]",
   },
   {
-    icon: UserPlus,
-    name: "Cat Profiles",
-    headline: "A personalized space for every cat in the house.",
+    icon: Heart,
+    name: "Progress you can feel",
+    headline: "See the play that brightens their week.",
     description:
-      "Name, photo, age, breed, preferences. Mibbles tunes content recommendations based on what each cat actually watches.",
-    bullets: [
-      "Unlimited cat profiles",
-      "Per-cat preference learning",
-      "Birthday & adoption-day reminders",
-      "Multi-cat household tips & schedules",
+      "Mibbles records taps, hits, sessions, daily streaks, and favorite hunts for each cat. A simple engagement circle turns all that activity into progress an owner can understand at a glance.",
+    benefits: [
+      "Per-cat engagement and stimulation view",
+      "Favorite games and heart ratings",
+      "Multiple profiles with Premium",
     ],
-    screenshot: "/screenshots/profile.png",
+    screenshot: "/screenshots/current/progress.png",
+    tone: "bg-[#f7f4e9]",
   },
   {
-    icon: Sparkles,
-    name: "Wellness Insights",
-    headline: "Gentle nudges, grounded in feline behavior research.",
+    icon: Share2,
+    name: "Reactions worth keeping",
+    headline: "Save the moment after the pounce.",
     description:
-      "Track enrichment minutes, play sessions, and watch patterns. Get research-informed suggestions when your cat seems under-stimulated.",
-    bullets: [
-      "Weekly enrichment report",
-      "Behavior pattern detection",
-      "Daily activity goals tuned to your cat's life stage",
-      "Vet-shareable PDF summary",
+      "Reaction clips live together in a clean 9:16 gallery, ready to replay or share. It is an easy way to keep the funny, focused, and unexpectedly sweet moments that happen during play.",
+    benefits: [
+      "Vertical clips made for mobile sharing",
+      "Organized by the game your cat played",
+      "One-tap replay and sharing",
     ],
-    screenshot: "/screenshots/insights.png",
-  },
-  {
-    icon: GraduationCap,
-    name: "Onboarding Science",
-    headline: "Learn the why behind everything in the app.",
-    description:
-      "Five short lessons walk you through what enrichment actually means for cats — drawn from peer-reviewed feline welfare research.",
-    bullets: [
-      "Five 2-minute lessons",
-      "Skim or deep-read formats",
-      "Cited studies you can read in full",
-      "Refresher mode for new cat parents",
-    ],
-    screenshot: "/screenshots/onboarding.png",
-  },
-  {
-    icon: Clock,
-    name: "Built for Daily Use",
-    headline: "Quietly fits into the routine you already have.",
-    description:
-      "Quick-start widget, Lock Screen shortcut, Siri integration. Two taps from your home screen to a calm cat.",
-    bullets: [
-      "Home Screen widget",
-      "Siri shortcuts (\"Hey Siri, start Cat Mode\")",
-      "Apple Watch quick-start",
-      "Focus mode automation",
-    ],
-    screenshot: "/screenshots/widgets.png",
+    screenshot: "/screenshots/current/reactions.png",
+    tone: "bg-[#edf8f8]",
   },
 ];
 
@@ -114,57 +85,94 @@ export default function FeaturesPage() {
           { name: "Features", url: "/features" },
         ]}
       />
-      <Section className="pt-16 md:pt-24 pb-12">
+
+      <Section className="relative overflow-hidden pb-16 pt-16 md:pb-24 md:pt-24">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_25%,rgba(199,245,219,0.65),transparent_35%),radial-gradient(circle_at_85%_30%,rgba(246,221,211,0.75),transparent_38%)]" />
         <Container>
-          <div className="max-w-3xl">
-            <Eyebrow>Features</Eyebrow>
-            <h1 className="font-serif text-display-2xl mt-5 mb-6 text-balance">
-              A complete toolkit for your cat&apos;s mental wellbeing.
-            </h1>
-            <p className="text-xl text-ink-600 max-w-prose leading-snug">
-              Everything in Mibbles is built around one question: how do we
-              make an indoor cat&apos;s day richer? Here&apos;s what that looks
-              like in practice.
-            </p>
-            <div className="mt-8">
-              <AppStoreButton size="lg" />
+          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-7">
+              <Eyebrow>Made for happier indoor cats</Eyebrow>
+              <h1 className="mt-5 font-serif text-display-2xl text-balance">
+                A happier cat starts with something to chase.
+              </h1>
+              <p className="mt-6 max-w-2xl text-xl leading-snug text-ink-600">
+                Mibbles turns a screen into active enrichment: fresh hunts,
+                responsive movement, visible progress, and play that grows more
+                personal with every session.
+              </p>
+              <div className="mt-9">
+                <AppStoreButton size="lg" />
+              </div>
+            </div>
+            <div className="relative mx-auto w-full max-w-sm lg:col-span-5">
+              <div className="absolute inset-10 -z-10 rounded-full bg-terracotta-100 blur-3xl" />
+              <Image
+                src="/screenshots/current/home.png"
+                alt="Current Mibbles home screen and favorite game experience"
+                width={1242}
+                height={2688}
+                priority
+                className="h-auto w-full rounded-[2rem] shadow-card"
+              />
             </div>
           </div>
         </Container>
       </Section>
 
-      {features.map((feat, i) => (
-        <Section key={feat.name} className={i % 2 === 1 ? "bg-cream-200" : ""}>
+      <Section className="border-y border-ink-100 bg-cream-50 py-10 md:py-12">
+        <Container>
+          <div className="grid gap-8 text-center sm:grid-cols-3">
+            <div>
+              <p className="font-serif text-4xl text-ink-900">Free</p>
+              <p className="mt-2 text-sm text-ink-500">standard game modes</p>
+            </div>
+            <div>
+              <p className="font-serif text-4xl text-ink-900">1–5</p>
+              <p className="mt-2 text-sm text-ink-500">heart reaction ratings</p>
+            </div>
+            <div>
+              <p className="font-serif text-4xl text-ink-900">9:16</p>
+              <p className="mt-2 text-sm text-ink-500">share-ready reaction clips</p>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {features.map((feature, index) => (
+        <Section key={feature.name} className={index % 2 === 1 ? "bg-cream-200/55" : ""}>
           <Container>
-            <div
-              className={`grid lg:grid-cols-12 gap-12 lg:gap-16 items-center ${
-                i % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
-            >
-              <div className={`lg:col-span-6 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                <div className="h-12 w-12 rounded-2xl bg-terracotta-50 flex items-center justify-center mb-5">
-                  <feat.icon className="h-6 w-6 text-terracotta-600" strokeWidth={1.5} />
+            <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-20">
+              <div className={`lg:col-span-6 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-terracotta-50">
+                  <feature.icon className="h-6 w-6 text-terracotta-600" strokeWidth={1.5} />
                 </div>
-                <Eyebrow>{feat.name}</Eyebrow>
-                <h2 className="font-serif text-display-lg mt-5 mb-6 text-balance">
-                  {feat.headline}
+                <Eyebrow>{feature.name}</Eyebrow>
+                <h2 className="mt-5 font-serif text-display-lg text-balance">
+                  {feature.headline}
                 </h2>
-                <p className="text-lg text-ink-700 leading-relaxed mb-6 max-w-prose">
-                  {feat.description}
+                <p className="mt-6 max-w-prose text-lg leading-relaxed text-ink-700">
+                  {feature.description}
                 </p>
-                <ul className="space-y-3 max-w-prose">
-                  {feat.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-3 text-ink-700">
+                <ul className="mt-7 space-y-3">
+                  {feature.benefits.map((benefit) => (
+                    <li key={benefit} className="flex items-start gap-3 text-ink-700">
                       <span className="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta-500" />
-                      <span>{b}</span>
+                      <span>{benefit}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className={`lg:col-span-6 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                <IPhoneMockup src={feat.screenshot} alt={`${feat.name} screenshot`}>
-                  <span className="font-serif">{feat.name}</span>
-                </IPhoneMockup>
+              <div className={`lg:col-span-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                <div className={`mx-auto max-w-md overflow-hidden rounded-[2rem] p-4 shadow-soft sm:p-6 ${feature.tone}`}>
+                  <Image
+                    src={feature.screenshot}
+                    alt={`Current Mibbles app screen for ${feature.name}`}
+                    width={1242}
+                    height={2688}
+                    className="h-auto w-full rounded-2xl shadow-card"
+                    sizes="(min-width: 1024px) 42vw, 90vw"
+                  />
+                </div>
               </div>
             </div>
           </Container>
@@ -174,11 +182,11 @@ export default function FeaturesPage() {
       <Section className="bg-ink-900 text-cream">
         <Container size="md">
           <div className="text-center">
-            <h2 className="font-serif text-display-lg text-balance">
-              Ready to see what gets your cat moving?
+            <h2 className="font-serif text-display-lg text-cream text-balance">
+              Give their curiosity somewhere to go.
             </h2>
-            <p className="mt-5 text-cream/70 text-lg max-w-prose mx-auto">
-              Download Mibbles on the App Store and start with a 7-day free trial.
+            <p className="mx-auto mt-5 max-w-prose text-lg text-cream/70">
+              Download Mibbles on the App Store and start playing today.
             </p>
             <div className="mt-8 flex justify-center">
               <AppStoreButton variant="light" size="lg" />
