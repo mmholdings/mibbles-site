@@ -29,9 +29,9 @@ const faqs = [
       "Cat Cam uses your iPhone's camera so you can check in on your cat from another room or remotely. It runs locally on your device — no third-party servers store the video.",
   },
   {
-    question: "When does Mibbles launch?",
+    question: "Where can I download Mibbles?",
     answer:
-      "We're targeting a launch on the iOS App Store in the coming weeks. Join the waitlist on this page and we'll email you the day it goes live — plus the early Mibbles weekly read on cat wellness.",
+      "Mibbles is available on the App Store for iPhone and iPad. Download it today and start with a 7-day free trial of Mibbles Premium.",
   },
   {
     question: "How much screen time is too much for a cat?",
@@ -51,7 +51,7 @@ const faqs = [
   {
     question: "Can I use Mibbles with multiple cats?",
     answer:
-      "Yes. Create as many cat profiles as you like — each with their own preferences and viewing history.",
+      "Yes. Mibbles Premium lets you create multiple cat profiles, each with their own preferences and enrichment history.",
   },
 ];
 
@@ -85,7 +85,7 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="mt-6 text-sm text-ink-500">
-                Mibbles is coming to iOS · Join the waitlist and we&apos;ll email you the moment it launches
+                Available on iPhone and iPad · Start with a 7-day free trial
               </p>
             </div>
 
@@ -249,7 +249,7 @@ export default function HomePage() {
       </Section>
 
       {/* ─────────────────────────── NEWSLETTER ─────────────────────────── */}
-      <Section id="waitlist" className="scroll-mt-24 bg-cream-200">
+      <Section id="newsletter" className="scroll-mt-24 bg-cream-200">
         <Container size="md">
           <div className="text-center max-w-2xl mx-auto">
             <BookOpen className="h-8 w-8 mx-auto mb-4 text-terracotta-600" strokeWidth={1.5} />

@@ -10,7 +10,7 @@ const schema = z.object({
 });
 
 /**
- * Newsletter / waitlist endpoint.
+ * Newsletter signup endpoint.
  *
  * Primary backend: Supabase `subscribers` table (see supabase/migrations).
  * If Supabase env vars aren't set, we log to console — useful in dev,

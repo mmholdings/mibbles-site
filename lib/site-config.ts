@@ -12,12 +12,11 @@ export const siteConfig = {
   googlePlayUrl:
     process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL ??
     "https://play.google.com/store/apps/details?id=app.rork.4z9riky51dy4223vpp3gb",
-  // Pre-launch. Real numbers added when the app ships.
-  launching: true,
+  launching: false,
   pricing: {
     trialDays: 7,
-    weekly: { price: "$4.99", per: "week" },
-    annual: { price: "$49.99", per: "year", savings: "Save 80%" },
+    monthly: { price: "$2.99", per: "month" },
+    annual: { price: "$29.99", per: "year", savings: "Save 16%" },
   },
   author: {
     name: "The Mibbles Team",
@@ -43,7 +42,7 @@ export const siteConfig = {
       links: [
         { label: "Features", href: "/features" },
         { label: "Pricing", href: "/pricing" },
-        { label: "Join the waitlist", href: "/#waitlist" },
+        { label: "Download", href: "/download" },
         { label: "What's New", href: "/blog?category=Trends" },
       ],
     },

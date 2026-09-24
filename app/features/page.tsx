@@ -175,10 +175,10 @@ export default function FeaturesPage() {
         <Container size="md">
           <div className="text-center">
             <h2 className="font-serif text-display-lg text-balance">
-              Mibbles is coming to iOS.
+              Ready to see what gets your cat moving?
             </h2>
             <p className="mt-5 text-cream/70 text-lg max-w-prose mx-auto">
-              Join the waitlist and we&apos;ll email you the day it launches.
+              Download Mibbles on the App Store and start with a 7-day free trial.
             </p>
             <div className="mt-8 flex justify-center">
               <AppStoreButton variant="light" size="lg" />

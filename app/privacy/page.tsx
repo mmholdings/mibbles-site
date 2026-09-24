@@ -53,7 +53,7 @@ export default function PrivacyPage() {
           <h2>Information collected on this website</h2>
           <ul>
             <li>
-              <strong>Newsletter and waitlist.</strong> If you subscribe, we collect
+              <strong>Newsletter.</strong> If you subscribe, we collect
               your email address and the signup source. This information is stored
               with our database and email-service providers.
             </li>

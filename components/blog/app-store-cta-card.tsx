@@ -6,13 +6,9 @@ interface Props {
   body?: string;
 }
 
-/**
- * In-blog-post CTA card.
- * App is pre-launch — points at the waitlist via AppStoreButton.
- */
 export function AppStoreCTACard({
-  headline = "Mibbles is coming to iOS soon.",
-  body = "Be the first to try it. We'll email you the day it lands on the App Store — no spam, just the launch.",
+  headline = "Make playtime part of their routine.",
+  body = "Download Mibbles on the App Store and start with a 7-day free trial.",
 }: Props) {
   return (
     <aside className="my-10 rounded-2xl bg-ink-900 text-cream p-8 md:p-10">
