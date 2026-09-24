@@ -10,7 +10,7 @@ export default function PrivacyPage() {
   return (
     <Section className="pt-16 md:pt-24">
       <Container size="sm">
-        <Eyebrow>Last updated · September 20, 2026</Eyebrow>
+        <Eyebrow>Last updated · September 24, 2026</Eyebrow>
         <h1 className="font-serif text-display-xl mt-4 mb-6">Privacy Policy</h1>
 
         <div className="prose prose-lg max-w-none">
@@ -107,6 +107,15 @@ export default function PrivacyPage() {
             correction, or deletion of personal information we control. Depending
             on where you live, additional rights may apply. We will not discriminate
             against you for exercising a privacy right.
+          </p>
+
+          <h2>Additional notices</h2>
+          <p>
+            California residents can review our <a href="/ccpa">CCPA Notice</a> and
+            everyone can use <a href="/privacy-choices">Your Privacy Choices</a> to
+            understand or exercise available privacy rights. Our separate{" "}
+            <a href="/consumer-health-data">Consumer Health Data Privacy Notice</a>{" "}
+            explains how laws covering human consumer health information relate to Mibbles.
           </p>
 
           <h2>Children</h2>

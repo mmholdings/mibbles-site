@@ -19,11 +19,7 @@ export function OrganizationSchema() {
         name: siteConfig.name,
         url: siteConfig.url,
         logo: absoluteUrl("/logo-512.png"),
-        sameAs: [
-          siteConfig.links.twitter,
-          siteConfig.links.instagram,
-          siteConfig.links.tiktok,
-        ],
+        sameAs: [siteConfig.links.tiktok],
         contactPoint: {
           "@type": "ContactPoint",
           email: siteConfig.author.email,

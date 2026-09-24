@@ -18,7 +18,7 @@ export function PricingTeaser() {
       <div className="relative grid md:grid-cols-2 gap-12 items-center">
         <div>
           <Eyebrow className="text-terracotta-300">Mibbles Premium</Eyebrow>
-          <h2 className="font-serif text-display-lg mt-4 mb-6 text-balance">
+          <h2 className="font-serif text-display-lg mt-4 mb-6 text-balance text-cream">
             More ways to keep them curious.
           </h2>
           <p className="text-cream/70 text-lg leading-relaxed mb-8 max-w-prose">

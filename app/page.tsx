@@ -65,8 +65,7 @@ export default function HomePage() {
         <Container>
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 animate-fade-up">
-              <Eyebrow>iOS · Backed by feline behavior research</Eyebrow>
-              <h1 className="font-serif text-display-2xl mt-5 mb-6 text-balance text-ink-900">
+              <h1 className="font-serif text-display-2xl mb-6 text-balance text-ink-900">
                 Mental wellness <br className="hidden md:block" />
                 for your cat.
               </h1>

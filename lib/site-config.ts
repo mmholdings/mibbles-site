@@ -25,8 +25,6 @@ export const siteConfig = {
     support: "support@mibbles.app",
   },
   links: {
-    twitter: "https://twitter.com/mibblesapp",
-    instagram: "https://instagram.com/mibblesapp",
     tiktok: "https://tiktok.com/@mibblescat",
   },
   nav: [
@@ -65,9 +63,13 @@ export const siteConfig = {
       ],
     },
     {
-      title: "Legal",
+      title: "Legal & Privacy",
       links: [
         { label: "Privacy", href: "/privacy" },
+        { label: "Your Privacy Choices", href: "/privacy-choices" },
+        { label: "CCPA Notice", href: "/ccpa" },
+        { label: "Consumer Health Data", href: "/consumer-health-data" },
+        { label: "Accessibility", href: "/accessibility" },
         { label: "Terms", href: "/terms" },
       ],
     },

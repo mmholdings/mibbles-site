@@ -119,25 +119,6 @@ export default function FeaturesPage() {
         </Container>
       </Section>
 
-      <Section className="border-y border-ink-100 bg-cream-50 py-10 md:py-12">
-        <Container>
-          <div className="grid gap-8 text-center sm:grid-cols-3">
-            <div>
-              <p className="font-serif text-4xl text-ink-900">Free</p>
-              <p className="mt-2 text-sm text-ink-500">standard game modes</p>
-            </div>
-            <div>
-              <p className="font-serif text-4xl text-ink-900">1–5</p>
-              <p className="mt-2 text-sm text-ink-500">heart reaction ratings</p>
-            </div>
-            <div>
-              <p className="font-serif text-4xl text-ink-900">9:16</p>
-              <p className="mt-2 text-sm text-ink-500">share-ready reaction clips</p>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
       {features.map((feature, index) => (
         <Section key={feature.name} className={index % 2 === 1 ? "bg-cream-200/55" : ""}>
           <Container>

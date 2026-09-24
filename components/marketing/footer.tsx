@@ -47,9 +47,7 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-ink-100 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm text-ink-500">
           <p>© {new Date().getFullYear()} {siteConfig.name}. Made with care for cats everywhere.</p>
           <div className="flex items-center gap-5">
-            <a href={siteConfig.links.instagram} target="_blank" rel="noopener" className="hover:text-ink-900">Instagram</a>
             <a href={siteConfig.links.tiktok} target="_blank" rel="noopener" className="hover:text-ink-900">TikTok</a>
-            <a href={siteConfig.links.twitter} target="_blank" rel="noopener" className="hover:text-ink-900">X</a>
           </div>
         </div>
       </Container>
