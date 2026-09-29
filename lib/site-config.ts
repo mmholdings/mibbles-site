@@ -5,13 +5,8 @@ export const siteConfig = {
     "Mibbles is the iOS app for cat mental health, enrichment, and wellness. Cat TV, Cat Cam, and science-backed insights — built with feline behaviorists.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mibbles.app",
   ogImage: "/og-default.png",
-  appStoreUrl:
-    process.env.NEXT_PUBLIC_APP_STORE_URL ??
-    "https://apps.apple.com/app/id6770523158",
-  appStoreId: process.env.NEXT_PUBLIC_APP_STORE_ID ?? "6770523158",
-  googlePlayUrl:
-    process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL ??
-    "https://play.google.com/store/apps/details?id=app.rork.4z9riky51dy4223vpp3gb",
+  appStoreUrl: "https://apps.apple.com/us/app/mibbles-cat-tv-wellness/id6770523158",
+  appStoreId: "6770523158",
   launching: false,
   pricing: {
     trialDays: 7,

@@ -4,12 +4,10 @@ import { useEffect, useMemo, useState } from "react";
 import { Apple, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type Platform = "ios" | "android";
 type StoreLocation = "hero" | "bottom_cta";
 
 interface StoreButtonsProps {
   appleUrl: string;
-  googlePlayUrl: string;
   location: StoreLocation;
   compact?: boolean;
 }
@@ -32,7 +30,7 @@ function GooglePlayMark() {
   );
 }
 
-export function StoreButtons({ appleUrl, googlePlayUrl, location, compact = false }: StoreButtonsProps) {
+export function StoreButtons({ appleUrl, location, compact = false }: StoreButtonsProps) {
   const [device, setDevice] = useState<"ios" | "android" | "desktop">("desktop");
 
   useEffect(() => {
@@ -45,51 +43,63 @@ export function StoreButtons({ appleUrl, googlePlayUrl, location, compact = fals
   const stores = useMemo(
     () => [
       { platform: "ios" as const, href: appleUrl, eyebrow: "Download on the", label: "App Store" },
-      { platform: "android" as const, href: googlePlayUrl, eyebrow: "Get it on", label: "Google Play" },
+      { platform: "android" as const, href: null, eyebrow: "Coming soon on", label: "Google Play" },
     ].sort((a, b) => {
       if (device === "desktop") return 0;
       return a.platform === device ? -1 : b.platform === device ? 1 : 0;
     }),
-    [appleUrl, device, googlePlayUrl]
+    [appleUrl, device]
   );
 
-  const track = (platform: Platform) => {
-    const event = platform === "ios" ? "app_store_click" : "google_play_click";
-    const props = { platform, location };
-    window.plausible?.(event, { props });
-    window.gtag?.("event", event, props);
+  const track = () => {
+    const props = { platform: "ios", location };
+    window.plausible?.("app_store_click", { props });
+    window.gtag?.("event", "app_store_click", props);
   };
 
   return (
     <div className={cn("grid gap-3", compact && "min-[410px]:grid-cols-2")}>
-      {stores.map((store, index) => (
-        <a
+      {stores.map((store, index) => {
+        const content = (
+          <>
+            {store.platform === "ios" ? (
+              <Apple className="mr-4 h-9 w-9 shrink-0 fill-white" strokeWidth={1.2} />
+            ) : (
+              <span className="mr-4 flex"><GooglePlayMark /></span>
+            )}
+            <span className="min-w-0 flex-1 leading-none">
+              <span className="block text-[11px] font-medium text-white/72">{store.eyebrow}</span>
+              <span className={cn("mt-1 block whitespace-nowrap text-[21px] font-bold tracking-[-.025em]", compact && "min-[410px]:text-[17px]")}>{store.label}</span>
+            </span>
+            {store.platform === "ios" && <ChevronRight className="ml-2 h-5 w-5 shrink-0 text-white/85 transition-transform group-hover:translate-x-0.5" strokeWidth={2.5} />}
+          </>
+        );
+        const className = cn(
+          "group flex min-h-[72px] items-center rounded-[22px] bg-[#111] px-5 text-left text-white transition duration-200 focus-visible:ring-offset-[#effbf5]",
+          store.platform === "ios" ? "hover:-translate-y-0.5 hover:bg-black" : "cursor-default opacity-75",
+          index === 0
+            ? "shadow-[0_18px_42px_-20px_rgba(0,0,0,.8)]"
+            : "shadow-[0_10px_28px_-22px_rgba(0,0,0,.7)]",
+          compact && "min-[410px]:min-h-[66px] min-[410px]:px-4"
+        );
+        return store.href ? (
+          <a
           key={store.platform}
           href={store.href}
-          onClick={() => track(store.platform)}
-          data-analytics={store.platform === "ios" ? "app_store_click" : "google_play_click"}
+          onClick={track}
+          data-analytics="app_store_click"
           data-location={location}
-          className={cn(
-            "group flex min-h-[72px] items-center rounded-[22px] bg-[#111] px-5 text-left text-white transition duration-200 hover:-translate-y-0.5 hover:bg-black focus-visible:ring-offset-[#effbf5]",
-            index === 0
-              ? "shadow-[0_18px_42px_-20px_rgba(0,0,0,.8)]"
-              : "shadow-[0_10px_28px_-22px_rgba(0,0,0,.7)]",
-            compact && "min-[410px]:min-h-[66px] min-[410px]:px-4"
-          )}
+          className={className}
           aria-label={`${store.eyebrow} ${store.label}`}
         >
-          {store.platform === "ios" ? (
-            <Apple className="mr-4 h-9 w-9 shrink-0 fill-white" strokeWidth={1.2} />
-          ) : (
-            <span className="mr-4 flex"><GooglePlayMark /></span>
-          )}
-          <span className="min-w-0 flex-1 leading-none">
-            <span className="block text-[11px] font-medium text-white/72">{store.eyebrow}</span>
-            <span className={cn("mt-1 block whitespace-nowrap text-[21px] font-bold tracking-[-.025em]", compact && "min-[410px]:text-[17px]")}>{store.label}</span>
-          </span>
-          <ChevronRight className="ml-2 h-5 w-5 shrink-0 text-white/85 transition-transform group-hover:translate-x-0.5" strokeWidth={2.5} />
-        </a>
-      ))}
+          {content}
+          </a>
+        ) : (
+          <div key={store.platform} className={className} aria-label="Google Play coming soon">
+            {content}
+          </div>
+        );
+      })}
     </div>
   );
 }

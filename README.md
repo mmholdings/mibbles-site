@@ -230,8 +230,6 @@ git push -u origin main
 | `NEXT_PUBLIC_SITE_URL`         | Set to your Railway public URL (e.g. `https://mibbles-site-production.up.railway.app`) — update after deploy |
 | `SUPABASE_URL`                 | From Supabase project settings |
 | `SUPABASE_SERVICE_ROLE_KEY`    | From Supabase project settings (secret) |
-| `NEXT_PUBLIC_APP_STORE_URL`    | Real App Store URL once the app launches (placeholder for now) |
-| `NEXT_PUBLIC_APP_STORE_ID`     | iOS smart app banner ID |
 | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Plausible analytics (optional) |
 | `RESEND_API_KEY`               | Contact form (optional) |
 | `ADMIN_USER` / `ADMIN_PASSWORD`| Basic-auth for `/admin` |

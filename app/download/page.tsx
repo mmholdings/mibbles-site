@@ -73,7 +73,6 @@ export default function DownloadPage() {
           <div className="mt-6">
             <StoreButtons
               appleUrl={siteConfig.appStoreUrl}
-              googlePlayUrl={siteConfig.googlePlayUrl}
               location="hero"
             />
           </div>
@@ -159,7 +158,6 @@ export default function DownloadPage() {
           <div className="relative mt-5">
             <StoreButtons
               appleUrl={siteConfig.appStoreUrl}
-              googlePlayUrl={siteConfig.googlePlayUrl}
               location="bottom_cta"
               compact
             />
