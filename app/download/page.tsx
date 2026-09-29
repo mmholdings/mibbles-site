@@ -84,32 +84,24 @@ export default function DownloadPage() {
         <section className="relative mt-7 aspect-[1.12/1] overflow-hidden rounded-[32px] border border-white/75 bg-[linear-gradient(145deg,#d9f5e9,#f6fff9_58%,#f6e9df)] shadow-[0_25px_60px_-36px_rgba(25,77,56,.48)]" aria-label="Mibbles gameplay preview">
           <div className="absolute -left-10 top-8 h-44 w-44 rounded-full bg-white/65 blur-2xl" />
           <div className="absolute left-[8%] top-[5%] z-10 w-[40%] rotate-[-5deg] rounded-[27px] border-[6px] border-[#1a1a1a] bg-[#111] p-1 shadow-[0_24px_45px_-18px_rgba(0,0,0,.6)]">
-            <div className="relative aspect-[9/18.7] overflow-hidden rounded-[18px] bg-white">
-              <video
-                className="h-full w-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                aria-label="Animated Mibbles app preview"
-              >
-                <source src="/media/onboarding-hero.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-x-2 top-[38%] grid grid-cols-2 gap-1.5" aria-hidden="true">
-                {[
-                  ["Classic", "#ec73bc"],
-                  ["Chase", "#ff9d48"],
-                  ["Pop", "#49cad4"],
-                  ["Peek", "#8a65e9"],
-                  ["Calm", "#63bbed"],
-                  ["Chaos", "#ec67a8"],
-                ].map(([label, color]) => (
-                  <span key={label} className="flex h-7 items-center justify-center rounded-md text-[6px] font-black text-white shadow-sm" style={{ backgroundColor: color }}>
-                    {label}
-                  </span>
-                ))}
+            <div className="water-hunt-screen relative aspect-[9/18.7] overflow-hidden rounded-[18px]" role="img" aria-label="Looping Water Hunt preview with koi swimming through sunlit turquoise water">
+              <Image src="/images/water-hunt/caustic-water.png" alt="" fill sizes="(max-width: 560px) 40vw, 240px" className="water-hunt-texture" priority />
+              <div className="water-hunt-caustics" aria-hidden="true" />
+              <div className="water-hunt-fish water-hunt-fish--koi-one" aria-hidden="true">
+                <Image src="/images/water-hunt/koi-sanke.png" alt="" fill sizes="(max-width: 560px) 18vw, 90px" className="object-contain" priority />
               </div>
+              <div className="water-hunt-fish water-hunt-fish--koi-two" aria-hidden="true">
+                <Image src="/images/water-hunt/koi-sanke.png" alt="" fill sizes="(max-width: 560px) 18vw, 90px" className="object-contain" />
+              </div>
+              <div className="water-hunt-fish water-hunt-fish--goldfish" aria-hidden="true">
+                <Image src="/images/water-hunt/goldfish.png" alt="" fill sizes="(max-width: 560px) 18vw, 90px" className="object-contain" />
+              </div>
+              <svg className="water-hunt-mibbles" viewBox="0 0 240 250" aria-hidden="true">
+                <path d="M150 275 C132 234 74 205 72 158 C70 118 103 87 139 92" fill="none" stroke="#080b10" strokeWidth="76" strokeLinecap="round" />
+                <circle cx="126" cy="91" r="6.5" fill="white" />
+                <circle cx="148" cy="88" r="6.5" fill="white" />
+              </svg>
+              <div className="water-hunt-island" aria-hidden="true" />
             </div>
           </div>
           <div className="absolute -bottom-[2%] -right-[16%] z-20 h-[62%] w-[86%] overflow-hidden [mask-image:radial-gradient(ellipse_at_66%_68%,black_38%,transparent_76%)]">

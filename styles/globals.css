@@ -78,3 +78,167 @@
   }
   .animate-fade-up { animation: fade-up 0.6s ease-out both; }
 }
+
+@keyframes water-caustic-drift {
+  0% { transform: translate3d(-2%, -1%, 0) scale(1.04); background-position: 0% 0%, 100% 100%, 40% 20%; }
+  50% { transform: translate3d(1%, 2%, 0) scale(1.08); background-position: 45% 32%, 60% 54%, 70% 70%; }
+  100% { transform: translate3d(2%, -1%, 0) scale(1.03); background-position: 100% 70%, 0% 25%, 10% 85%; }
+}
+
+@keyframes water-texture-flow {
+  0%, 100% { transform: scale(1.05) translate3d(-1.2%, -1%, 0); }
+  50% { transform: scale(1.1) translate3d(1.5%, 1.2%, 0); }
+}
+
+@keyframes koi-swim-one {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-8deg) scale(1); }
+  24% { transform: translate3d(14px, -10px, 0) rotate(2deg) scaleX(.97); }
+  53% { transform: translate3d(7px, 18px, 0) rotate(9deg) scale(1.025, .98); }
+  78% { transform: translate3d(-13px, 8px, 0) rotate(-2deg) scaleX(1.02); }
+}
+
+@keyframes koi-swim-two {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(164deg) scale(.92); }
+  28% { transform: translate3d(-14px, 17px, 0) rotate(174deg) scale(.95, .9); }
+  57% { transform: translate3d(6px, 22px, 0) rotate(184deg) scale(.9, .94); }
+  81% { transform: translate3d(16px, 7px, 0) rotate(170deg) scale(.96); }
+}
+
+@keyframes goldfish-swim {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg) scale(.84); }
+  30% { transform: translate3d(-13px, -15px, 0) rotate(-12deg) scale(.87, .82); }
+  61% { transform: translate3d(-21px, -4px, 0) rotate(-20deg) scale(.82, .88); }
+  83% { transform: translate3d(-9px, 12px, 0) rotate(-8deg) scale(.86); }
+}
+
+@keyframes mibbles-peek {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-3deg); }
+  45% { transform: translate3d(-3px, -7px, 0) rotate(2deg); }
+  70% { transform: translate3d(3px, -2px, 0) rotate(-1deg); }
+}
+
+.water-hunt-screen {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 12%, rgba(255,255,255,.36), transparent 35%),
+    linear-gradient(155deg, #35c7ef 0%, #72dcf2 37%, #4cccf0 70%, #a1eafa 100%);
+}
+
+.water-hunt-screen::before,
+.water-hunt-screen::after {
+  position: absolute;
+  inset: -15%;
+  content: "";
+  pointer-events: none;
+}
+
+.water-hunt-screen::before {
+  z-index: 1;
+  opacity: .42;
+  background-image:
+    radial-gradient(ellipse 20% 8% at 24% 22%, rgba(255,255,255,.58), transparent 78%),
+    radial-gradient(ellipse 18% 9% at 71% 32%, rgba(255,255,255,.5), transparent 78%),
+    radial-gradient(ellipse 24% 9% at 37% 66%, rgba(255,255,255,.46), transparent 78%),
+    radial-gradient(ellipse 19% 8% at 80% 77%, rgba(255,255,255,.5), transparent 78%),
+    radial-gradient(ellipse 25% 12% at 54% 47%, rgba(24,153,211,.16), transparent 78%);
+  background-size: 145% 130%, 130% 145%, 150% 125%;
+  filter: blur(9px);
+  animation: water-caustic-drift 13s ease-in-out infinite alternate;
+}
+
+.water-hunt-screen::after {
+  z-index: 4;
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(255,255,255,.1), transparent 32%, transparent 72%, rgba(255,255,255,.13)),
+    radial-gradient(ellipse at 50% 48%, transparent 48%, rgba(0,83,136,.12) 100%);
+  mix-blend-mode: screen;
+}
+
+.water-hunt-caustics {
+  position: absolute;
+  z-index: 1;
+  inset: -18%;
+  pointer-events: none;
+  opacity: .27;
+  background-image:
+    repeating-radial-gradient(ellipse at 20% 24%, transparent 0 17px, rgba(255,255,255,.34) 18px 20px, transparent 21px 34px),
+    repeating-radial-gradient(ellipse at 76% 67%, transparent 0 22px, rgba(255,255,255,.27) 23px 25px, transparent 26px 42px),
+    repeating-radial-gradient(ellipse at 46% 45%, transparent 0 28px, rgba(24,145,206,.17) 29px 31px, transparent 32px 52px);
+  background-size: 170% 145%, 155% 170%, 190% 150%;
+  filter: blur(4px);
+  mix-blend-mode: screen;
+  animation: water-caustic-drift 17s ease-in-out infinite alternate-reverse;
+}
+
+.water-hunt-texture {
+  z-index: 0;
+  object-fit: cover;
+  opacity: .93;
+  filter: saturate(1.08) brightness(1.04);
+  animation: water-texture-flow 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.water-hunt-fish {
+  position: absolute;
+  z-index: 2;
+  width: 34%;
+  aspect-ratio: 2 / 3;
+  filter: drop-shadow(0 7px 6px rgba(4, 91, 131, .24));
+  will-change: transform;
+}
+
+.water-hunt-fish--koi-one {
+  left: 12%;
+  top: 25%;
+  animation: koi-swim-one 8.6s ease-in-out infinite;
+}
+
+.water-hunt-fish--koi-two {
+  left: 45%;
+  top: 48%;
+  width: 31%;
+  animation: koi-swim-two 11.8s ease-in-out -4.2s infinite;
+}
+
+.water-hunt-fish--goldfish {
+  right: 2%;
+  top: 70%;
+  width: 30%;
+  animation: goldfish-swim 9.4s ease-in-out -2.7s infinite;
+}
+
+.water-hunt-mibbles {
+  position: absolute;
+  z-index: 3;
+  left: 22%;
+  bottom: -13%;
+  width: 68%;
+  height: 40%;
+  overflow: visible;
+  filter: drop-shadow(0 -3px 9px rgba(0, 74, 119, .28));
+  animation: mibbles-peek 6.5s ease-in-out infinite;
+}
+
+.water-hunt-island {
+  position: absolute;
+  z-index: 5;
+  top: 2.1%;
+  left: 50%;
+  width: 36%;
+  height: 4.7%;
+  border-radius: 999px;
+  background: #050609;
+  transform: translateX(-50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .water-hunt-screen::before,
+  .water-hunt-texture,
+  .water-hunt-caustics,
+  .water-hunt-fish,
+  .water-hunt-mibbles {
+    animation: none !important;
+  }
+}
