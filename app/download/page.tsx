@@ -83,7 +83,7 @@ export default function DownloadPage() {
 
         <section className="relative mt-7 aspect-[1.12/1] overflow-hidden rounded-[32px] border border-white/75 bg-[linear-gradient(145deg,#d9f5e9,#f6fff9_58%,#f6e9df)] shadow-[0_25px_60px_-36px_rgba(25,77,56,.48)]" aria-label="Mibbles gameplay preview">
           <div className="absolute -left-10 top-8 h-44 w-44 rounded-full bg-white/65 blur-2xl" />
-          <div className="absolute left-[9%] top-[5%] z-10 w-[48%] rotate-[-7deg] rounded-[27px] border-[6px] border-[#1a1a1a] bg-[#111] p-1 shadow-[0_24px_45px_-18px_rgba(0,0,0,.6)]">
+          <div className="absolute left-[8%] top-[5%] z-10 w-[40%] rotate-[-5deg] rounded-[27px] border-[6px] border-[#1a1a1a] bg-[#111] p-1 shadow-[0_24px_45px_-18px_rgba(0,0,0,.6)]">
             <div className="relative aspect-[9/18.7] overflow-hidden rounded-[18px] bg-white">
               <video
                 className="h-full w-full object-cover"
@@ -121,7 +121,7 @@ export default function DownloadPage() {
               className="object-cover object-[58%_54%]"
             />
           </div>
-          <p className="absolute bottom-5 left-5 z-30 rotate-[-7deg] text-[12px] font-black uppercase leading-tight tracking-[.12em] text-black/48">
+          <p className="absolute right-[5%] top-[8%] z-30 max-w-[37%] rounded-2xl border border-white/80 bg-white/75 px-3 py-2.5 text-[clamp(10px,2.3vw,14px)] font-black uppercase leading-[1.2] tracking-[.12em] text-black/70 shadow-[0_12px_28px_-18px_rgba(0,0,0,.22)] backdrop-blur-sm">
             Tap. Chase.<br />Play. Repeat.
           </p>
         </section>
