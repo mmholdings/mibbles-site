@@ -104,7 +104,7 @@ export default function DownloadPage() {
               <div className="water-hunt-island" aria-hidden="true" />
             </div>
           </div>
-          <div className="absolute -bottom-[2%] -right-[16%] z-20 h-[62%] w-[86%] overflow-hidden [mask-image:radial-gradient(ellipse_at_66%_68%,black_38%,transparent_76%)]">
+          <div className="absolute -bottom-[2%] -right-[16%] z-0 h-[62%] w-[86%] overflow-hidden [mask-image:radial-gradient(ellipse_at_66%_68%,black_38%,transparent_76%)]">
             <Image
               src="/images/cats/cat-cam.png"
               alt="A curious cat reaching toward Mibbles"
