@@ -19,35 +19,35 @@ export default function TikTokDownloadPage() {
           <span className="mt-1 text-[12px] font-semibold text-[#56544f]">@mibblescat</span>
         </header>
 
-        <section className="relative mx-auto mt-1 h-[230px] max-w-[420px] overflow-hidden rounded-t-[28px] bg-[radial-gradient(circle_at_78%_10%,#d8f8ec_0%,#effcf6_43%,#fff8e9_100%)] text-center sm:h-[270px]" aria-label="Mibbles TikTok download guide">
-          <div className="absolute inset-x-0 top-0 h-[34%] overflow-hidden" aria-hidden="true">
+        <section className="relative mx-auto mt-1 aspect-[1.43] max-w-[420px] overflow-hidden rounded-t-[28px] bg-[radial-gradient(circle_at_78%_10%,#d8f8ec_0%,#effcf6_43%,#fff8e9_100%)] text-center" aria-label="Mibbles TikTok download guide">
+          <div className="absolute inset-x-0 top-0 h-[38%] overflow-hidden" aria-hidden="true">
             <Image src="/images/mibbles-loop.gif" alt="" fill unoptimized sizes="(max-width: 460px) 100vw, 420px" className="object-cover object-center" />
           </div>
-          <div className="absolute inset-x-0 bottom-0 top-[29%] rounded-t-[30px] bg-[#fffdf7] shadow-[0_-8px_24px_-18px_rgba(0,0,0,.3)]" />
-          <div className="absolute inset-x-3 top-[35%]">
-            <h1 className="text-[32px] font-black leading-[.98] tracking-[-.06em] min-[390px]:text-[38px]">You&apos;re in TikTok!</h1>
-            <p className="mx-auto mt-2 max-w-[350px] text-[15px] font-medium leading-[1.22] tracking-[-.025em] text-[#141720] min-[390px]:text-[16px]">
+          <div className="absolute inset-x-0 bottom-0 top-[31%] rounded-t-[30px] bg-[#fffdf7] shadow-[0_-8px_24px_-18px_rgba(0,0,0,.3)]" />
+          <div className="absolute inset-x-3 top-[36%]">
+            <h1 className="text-[34px] font-black leading-[.98] tracking-[-.06em] min-[390px]:text-[42px]">You&apos;re in TikTok!</h1>
+            <p className="mx-auto mt-3 max-w-[350px] text-[16px] font-medium leading-[1.28] tracking-[-.025em] text-[#141720] min-[390px]:text-[17px]">
               TikTok doesn&apos;t allow direct<br className="hidden min-[390px]:block" /> App Store downloads.
               <span className="mt-1 block text-[#626571]">But you can still get Mibbles<br className="hidden min-[390px]:block" /> in just a few taps!</span>
             </p>
           </div>
         </section>
 
-        <section className="mx-auto -mt-1 max-w-[420px] overflow-hidden rounded-[26px] border border-[#ece9f3] bg-[#f7f6fc] px-4 pb-3 pt-3 shadow-[0_16px_42px_-36px_rgba(42,31,79,.4)] min-[390px]:px-5" aria-label="How to open Mibbles in your browser">
+        <section className="mx-auto -mt-1 max-w-[420px] overflow-hidden rounded-[26px] border border-[#ece9f3] bg-[#f7f6fc] px-4 pb-4 pt-4 shadow-[0_16px_42px_-36px_rgba(42,31,79,.4)] min-[390px]:px-5" aria-label="How to open Mibbles in your browser">
           <div className="flex gap-3">
             <StepNumber>1</StepNumber>
             <div className="min-w-0 flex-1 pt-1">
               <p className="text-[16px] font-bold leading-tight min-[390px]:text-[18px]">Tap the ··· menu</p>
               <p className="mt-1 text-[14px] leading-tight text-[#686b75]">in the top right corner</p>
-              <div className="relative mt-2 h-[82px] overflow-hidden rounded-[20px] bg-[linear-gradient(180deg,#f6f4fc,#f0eff8)]">
-                <div className="absolute inset-x-4 top-4 h-[120px] rounded-t-[34px] border-[6px] border-[#272729] bg-white shadow-[0_6px_20px_rgba(0,0,0,.15)]">
+              <div className="relative mt-3 h-[112px] overflow-hidden rounded-[20px] bg-[linear-gradient(180deg,#f6f4fc,#f0eff8)]">
+                <div className="absolute inset-x-4 top-5 h-[150px] rounded-t-[38px] border-[7px] border-[#272729] bg-white shadow-[0_6px_20px_rgba(0,0,0,.15)]">
                   <span className="absolute left-5 top-4 text-[11px] font-semibold text-[#b3b4ba]">9:41</span>
-                  <span className="absolute right-[64px] top-[15px] text-[10px] font-bold text-[#34353a]">5G</span>
-                  <span className="absolute right-2 top-1 flex h-10 w-10 items-center justify-center rounded-full border-[3px] border-[#f16b83] bg-white text-[#15161a] shadow-sm">
-                    <MoreHorizontal size={24} strokeWidth={3.2} />
+                  <span className="absolute right-[72px] top-[19px] text-[11px] font-bold text-[#34353a]">5G</span>
+                  <span className="absolute right-3 top-2 flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-[#f16b83] bg-white text-[#15161a] shadow-sm">
+                    <MoreHorizontal size={27} strokeWidth={3.2} />
                   </span>
                 </div>
-                <svg aria-hidden="true" viewBox="0 0 46 38" className="absolute right-[39px] top-[5px] z-10 h-[32px] w-[40px] overflow-visible text-[#f16b83]">
+                <svg aria-hidden="true" viewBox="0 0 46 38" className="absolute right-[47px] top-[7px] z-10 h-[38px] w-[46px] overflow-visible text-[#f16b83]">
                   <path d="M2 3C16 1 17 10 24 18c4 5 8 8 15 10" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
                   <path d="m30 20 9 8-12 1" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -55,25 +55,25 @@ export default function TikTokDownloadPage() {
             </div>
           </div>
 
-          <div className="mt-3 flex gap-3">
+          <div className="mt-4 flex gap-3">
             <StepNumber>2</StepNumber>
             <div className="min-w-0 flex-1 pt-1">
               <p className="text-[16px] font-bold leading-tight min-[390px]:text-[18px]">Select “Open in browser”</p>
-              <div className="mt-2 overflow-hidden rounded-[20px] bg-white shadow-[0_12px_28px_-20px_rgba(18,20,30,.45)]">
-                <div className="flex items-center gap-3 px-4 py-2.5 text-[14px] font-semibold">
+              <div className="mt-3 overflow-hidden rounded-[20px] bg-white shadow-[0_12px_28px_-20px_rgba(18,20,30,.45)]">
+                <div className="flex items-center gap-3 px-4 py-3.5 text-[15px] font-semibold">
                   <Globe2 className="h-5 w-5 shrink-0 text-[#21232a]" />
                   <span className="flex-1">Open in browser</span>
                   <ArrowUpRight className="h-4 w-4 text-[#737782]" />
                 </div>
                 <div className="mx-4 h-px bg-[#efeff2]" />
-                <div className="flex items-center gap-3 px-4 py-2 text-[13px] text-[#676a74]">
+                <div className="flex items-center gap-3 px-4 py-3 text-[14px] text-[#676a74]">
                   <Link2 className="h-4 w-4 shrink-0" /> Copy link
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-3 flex gap-3">
+          <div className="mt-4 flex gap-3">
             <StepNumber>3</StepNumber>
             <div className="pt-1">
               <p className="text-[16px] font-bold leading-tight min-[390px]:text-[18px]">Then tap the button below</p>
@@ -84,7 +84,7 @@ export default function TikTokDownloadPage() {
 
         <a
           href={siteConfig.appStoreUrl}
-          className="mx-auto mt-3 flex min-h-[68px] max-w-[420px] items-center justify-center gap-3 rounded-full bg-black px-6 text-white shadow-[0_15px_28px_-14px_rgba(0,0,0,.48)] transition-transform active:scale-[.98] focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#2787ff]"
+          className="mx-auto mt-4 flex min-h-[74px] max-w-[420px] items-center justify-center gap-3 rounded-full bg-black px-6 text-white shadow-[0_15px_28px_-14px_rgba(0,0,0,.48)] transition-transform active:scale-[.98] focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#2787ff]"
           aria-label="Download Mibbles on the App Store"
           data-analytics="app_store_cta"
           data-location="tiktok_download"
@@ -92,7 +92,7 @@ export default function TikTokDownloadPage() {
           <AppleMark />
           <span className="text-left leading-none">
             <span className="block text-[13px] font-medium text-white/85">Download on the</span>
-            <span className="mt-1 block text-[23px] font-bold tracking-[-.03em]">App Store</span>
+            <span className="mt-1 block text-[25px] font-bold tracking-[-.03em]">App Store</span>
           </span>
           <span className="ml-3 text-[34px] font-light leading-none" aria-hidden="true">›</span>
         </a>
