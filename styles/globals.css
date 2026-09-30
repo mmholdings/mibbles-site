@@ -117,6 +117,20 @@
   70% { transform: translate3d(3px, -2px, 0) rotate(-1deg); }
 }
 
+@keyframes downloads-mibbles-wiggle {
+  0%, 100% { transform: translate3d(8px, -8px, 0) rotate(-6deg) scale(1.02); }
+  18% { transform: translate3d(-13px, 9px, 0) rotate(7deg) scale(.98, 1.04); }
+  37% { transform: translate3d(5px, -12px, 0) rotate(-10deg) scale(1.05, .97); }
+  58% { transform: translate3d(-17px, 4px, 0) rotate(9deg) scale(.99, 1.03); }
+  78% { transform: translate3d(12px, -5px, 0) rotate(-4deg) scale(1.04, .99); }
+}
+
+.downloads-mibbles-wiggle {
+  transform-origin: 100% 0%;
+  filter: drop-shadow(0 12px 14px rgba(23, 76, 59, .16));
+  animation: downloads-mibbles-wiggle 3.3s ease-in-out infinite;
+}
+
 .water-hunt-screen {
   isolation: isolate;
   background:
@@ -238,7 +252,8 @@
   .water-hunt-texture,
   .water-hunt-caustics,
   .water-hunt-fish,
-  .water-hunt-mibbles {
+  .water-hunt-mibbles,
+  .downloads-mibbles-wiggle {
     animation: none !important;
   }
 }

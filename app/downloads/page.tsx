@@ -19,8 +19,17 @@ export default function TikTokDownloadPage() {
           <span className="mt-1 text-[12px] font-semibold text-[#56544f]">@mibblescat</span>
         </header>
 
-        <section className="relative mx-auto mt-1 aspect-[1.05] max-w-[420px] overflow-hidden rounded-t-[28px] text-center" aria-label="Mibbles TikTok download guide">
-          <Image src="/images/tiktok-kitten-guide.png" alt="A curious tabby cat peeking over the download guide" fill priority sizes="(max-width: 460px) 100vw, 420px" className="object-cover object-top" />
+        <section className="relative mx-auto mt-1 aspect-[1.05] max-w-[420px] overflow-hidden rounded-t-[28px] bg-[radial-gradient(circle_at_78%_10%,#d8f8ec_0%,#effcf6_43%,#fff8e9_100%)] text-center" aria-label="Mibbles TikTok download guide">
+          <div className="absolute inset-x-0 top-0 h-[48%] overflow-hidden" aria-hidden="true">
+            <svg className="downloads-mibbles-wiggle absolute inset-0 h-full w-full" viewBox="0 0 420 200" preserveAspectRatio="xMidYMid slice">
+              <path d="M482 -82 C393 -51 434 30 353 35 C267 41 258 91 308 105 C351 117 285 169 244 132" fill="none" stroke="#08090b" strokeWidth="78" strokeLinecap="round" />
+              <circle cx="236" cy="123" r="6.2" fill="white" />
+              <circle cx="253" cy="135" r="6.2" fill="white" />
+            </svg>
+            <span className="absolute left-[8%] top-[22%] h-2 w-6 rotate-[-35deg] rounded-full bg-[#ffd153]" />
+            <span className="absolute left-[11%] top-[32%] h-2 w-4 rotate-[18deg] rounded-full bg-[#ffd153]" />
+          </div>
+          <div className="absolute inset-x-0 bottom-0 top-[42%] rounded-t-[30px] bg-[#fffdf7] shadow-[0_-8px_24px_-18px_rgba(0,0,0,.3)]" />
           <div className="absolute inset-x-3 top-[49%]">
             <h1 className="text-[34px] font-black leading-[.98] tracking-[-.06em] min-[390px]:text-[42px]">You&apos;re in TikTok!</h1>
             <p className="mx-auto mt-3 max-w-[350px] text-[16px] font-medium leading-[1.28] tracking-[-.025em] text-[#141720] min-[390px]:text-[17px]">
