@@ -32,6 +32,16 @@ export default function AboutPage() {
           <h1 className="font-serif text-display-2xl mt-5 mb-6 text-balance">
             Mibbles started with a bored cat named Suki.
           </h1>
+          <div className="relative mt-8 aspect-[1.3/1] overflow-hidden rounded-[2rem] bg-cream-200 shadow-soft sm:aspect-[1.6/1]">
+            <Image
+              src="/images/suki-origin.png"
+              alt="Suki relaxing in a sunny window"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover object-[center_46%]"
+            />
+          </div>
         </Container>
       </Section>
 
@@ -85,16 +95,6 @@ export default function AboutPage() {
           </p>
         </Container>
 
-        <div className="relative mx-auto mt-8 aspect-[3/1] w-full max-w-[1440px] sm:mt-10">
-          <Image
-            src="/images/founders-banner.png"
-            alt="The Mibbles team surrounded by cats"
-            fill
-            sizes="(max-width: 1440px) 100vw, 1440px"
-            className="object-cover object-center"
-          />
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-[32%] bg-gradient-to-b from-cream-200 via-cream-200/65 to-transparent" />
-        </div>
       </Section>
 
       <Section>
