@@ -13,35 +13,36 @@ export default function TikTokDownloadPage() {
   return (
     <main className="relative min-h-[100svh] overflow-hidden bg-[#fffdf7] px-4 pb-[max(2rem,env(safe-area-inset-bottom))] pt-[max(.75rem,env(safe-area-inset-top))] text-[#10131a]">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,#fff0c8_0%,rgba(255,253,247,0)_48%),linear-gradient(180deg,#fffdf7,#fffdf8)]" />
-      <div className="relative mx-auto w-full max-w-[460px]">
-        <header className="flex items-center justify-center gap-2 pt-1">
-          <Image src="/images/mibbles-wordmark.png" alt="Mibbles" width={1987} height={607} priority className="h-[30px] w-auto" />
+      <div className="relative mx-auto w-full max-w-[460px] sm:rounded-[46px] sm:border-[8px] sm:border-[#171719] sm:bg-[#fffdf7] sm:px-2 sm:pb-7 sm:shadow-[0_35px_80px_-35px_rgba(0,0,0,.45)]">
+        <header className="relative z-10 flex items-center justify-center gap-2 pt-1">
+          <Image src="/images/mibbles-wordmark.png" alt="Mibbles" width={1987} height={607} priority className="h-[27px] w-auto" />
           <span className="mt-1 text-[12px] font-semibold text-[#56544f]">@mibblescat</span>
         </header>
 
-        <section className="relative mx-auto mt-3 h-[184px] max-w-[420px] overflow-hidden rounded-t-[30px]" aria-label="Curious cat illustration">
-          <Image src="/images/tiktok-kitten-guide.png" alt="A curious tabby cat peeking over an instruction card" fill priority sizes="(max-width: 460px) 100vw, 420px" className="object-cover object-[center_8%]" />
-          <span className="absolute bottom-[-1px] left-0 right-0 h-12 bg-gradient-to-t from-[#fffdf7]/80 to-transparent" />
+        <section className="relative mx-auto mt-1 aspect-[1.05] max-w-[420px] overflow-hidden rounded-t-[28px] text-center" aria-label="Mibbles TikTok download guide">
+          <Image src="/images/tiktok-kitten-guide.png" alt="A curious tabby cat peeking over the download guide" fill priority sizes="(max-width: 460px) 100vw, 420px" className="object-cover object-top" />
+          <div className="absolute inset-x-3 top-[49%]">
+            <h1 className="text-[34px] font-black leading-[.98] tracking-[-.06em] min-[390px]:text-[42px]">You&apos;re in TikTok!</h1>
+            <p className="mx-auto mt-3 max-w-[350px] text-[16px] font-medium leading-[1.28] tracking-[-.025em] text-[#141720] min-[390px]:text-[17px]">
+              TikTok doesn&apos;t allow direct<br className="hidden min-[390px]:block" /> App Store downloads.
+              <span className="mt-1 block text-[#626571]">But you can still get Mibbles<br className="hidden min-[390px]:block" /> in just a few taps!</span>
+            </p>
+          </div>
         </section>
 
-        <section className="mx-auto max-w-[420px] text-center">
-          <h1 className="text-[36px] font-black leading-[.98] tracking-[-.06em] min-[390px]:text-[42px]">You&apos;re in TikTok!</h1>
-          <p className="mx-auto mt-3 max-w-[350px] text-[17px] font-medium leading-[1.27] tracking-[-.025em] text-[#141720]">
-            TikTok doesn&apos;t allow direct<br className="hidden min-[390px]:block" /> App Store downloads.
-            <span className="mt-1 block text-[#626571]">But you can still get Mibbles<br className="hidden min-[390px]:block" /> in just a few taps!</span>
-          </p>
-        </section>
-
-        <section className="mx-auto mt-5 max-w-[420px] overflow-hidden rounded-[26px] border border-[#ece9f3] bg-[#f7f6fc] px-4 pb-3 pt-4 shadow-[0_16px_42px_-36px_rgba(42,31,79,.4)] min-[390px]:px-5" aria-label="How to open Mibbles in your browser">
+        <section className="mx-auto -mt-1 max-w-[420px] overflow-hidden rounded-[26px] border border-[#ece9f3] bg-[#f7f6fc] px-4 pb-4 pt-4 shadow-[0_16px_42px_-36px_rgba(42,31,79,.4)] min-[390px]:px-5" aria-label="How to open Mibbles in your browser">
           <div className="flex gap-3">
             <StepNumber>1</StepNumber>
             <div className="min-w-0 flex-1 pt-1">
               <p className="text-[16px] font-bold leading-tight min-[390px]:text-[18px]">Tap the ··· menu</p>
               <p className="mt-1 text-[14px] leading-tight text-[#686b75]">in the top right corner</p>
-              <div className="relative mt-3 flex h-[70px] items-start justify-end overflow-hidden rounded-t-[18px] border border-[#dcdde4] bg-gradient-to-b from-[#e3e5eb] to-[#f7f6fc] px-4 pt-3">
-                <div className="absolute left-4 top-5 text-[11px] font-semibold text-[#9598a2]">9:41&nbsp;&nbsp; 5G</div>
-                <span className="absolute right-5 top-2 flex h-12 w-12 items-center justify-center rounded-full border-[3px] border-[#f16b83] bg-white text-[#15161a] shadow-sm"><MoreHorizontal size={25} strokeWidth={3} /></span>
-                <ArrowDownRight className="absolute right-[57px] top-[-2px] z-10 rotate-[-9deg] text-[#f16b83]" size={43} strokeWidth={3.5} />
+              <div className="relative mt-3 h-[94px] overflow-hidden rounded-t-[20px] bg-[linear-gradient(180deg,#f6f4fc,#f0eff8)]">
+                <div className="absolute left-[12%] top-4 h-[135px] w-[105%] rotate-[-4deg] rounded-t-[48px] border-[8px] border-[#272729] bg-white shadow-[0_6px_20px_rgba(0,0,0,.15)]">
+                  <span className="absolute left-5 top-4 text-[11px] font-semibold text-[#b3b4ba]">9:41</span>
+                  <span className="absolute right-[76px] top-4 text-[11px] font-bold text-[#34353a]">▂▄▆ 5G</span>
+                  <span className="absolute right-5 top-0 flex h-12 w-12 items-center justify-center rounded-full border-[4px] border-[#f16b83] bg-white text-[#15161a] shadow-sm"><MoreHorizontal size={25} strokeWidth={3} /></span>
+                </div>
+                <ArrowDownRight className="absolute right-[63px] top-0 z-10 rotate-[-9deg] text-[#f16b83]" size={47} strokeWidth={3.5} />
               </div>
             </div>
           </div>
