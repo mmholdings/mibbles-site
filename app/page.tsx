@@ -99,18 +99,6 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* ─────────────────────────── SOCIAL PROOF STRIP ─────────────────────────── */}
-      <Container>
-        <div className="border-y border-ink-100 py-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-sm text-ink-500">
-          <span className="font-medium text-ink-700">As featured in</span>
-          <span className="font-serif text-lg text-ink-400">The Spruce Pets</span>
-          <span className="font-serif text-lg text-ink-400">Catster</span>
-          <span className="font-serif text-lg text-ink-400">Modern Cat</span>
-          <span className="font-serif text-lg text-ink-400">Product Hunt</span>
-          <span className="font-serif text-lg text-ink-400">9to5Mac</span>
-        </div>
-      </Container>
-
       {/* ─────────────────────────── WHY MIBBLES ─────────────────────────── */}
       <Section>
         <Container>

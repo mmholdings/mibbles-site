@@ -62,8 +62,8 @@ export default function ConsumerHealthDataPage() {
           </p>
           <p>
             Submit a request or appeal by emailing{" "}
-            <a href="mailto:privacy@mibbles.app?subject=Consumer%20Health%20Data%20Request">
-              privacy@mibbles.app
+            <a href="mailto:mibblesapp@gmail.com?subject=Consumer%20Health%20Data%20Request">
+              mibblesapp@gmail.com
             </a>. We may ask for information reasonably necessary to verify your request.
           </p>
 
@@ -71,7 +71,7 @@ export default function ConsumerHealthDataPage() {
           <p>
             We will post material changes to this notice before they take effect.
             Questions can be sent to{" "}
-            <a href="mailto:privacy@mibbles.app">privacy@mibbles.app</a>.
+            <a href="mailto:mibblesapp@gmail.com">mibblesapp@gmail.com</a>.
           </p>
         </div>
       </Container>

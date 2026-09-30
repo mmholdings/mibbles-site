@@ -36,7 +36,7 @@ export function Nav() {
         <div className="flex h-16 md:h-20 items-center justify-between">
           <Link href="/" className="group" aria-label="Mibbles home">
             <Image
-              src="/images/mibbles-wordmark.png"
+              src="/images/mibbles-wordmark.webp"
               alt="Mibbles"
               width={1987}
               height={607}

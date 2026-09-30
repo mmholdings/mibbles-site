@@ -42,7 +42,7 @@ export default function DownloadPage() {
           <Link href="/" className="flex items-center" aria-label="Mibbles home">
             <div>
               <Image
-                src="/images/mibbles-wordmark.png"
+                src="/images/mibbles-wordmark.webp"
                 alt="Mibbles"
                 width={1987}
                 height={607}
@@ -85,16 +85,16 @@ export default function DownloadPage() {
           <div className="absolute -left-10 top-8 h-44 w-44 rounded-full bg-white/65 blur-2xl" />
           <div className="absolute left-[8%] top-[5%] z-10 w-[40%] rotate-[-5deg] rounded-[27px] border-[6px] border-[#1a1a1a] bg-[#111] p-1 shadow-[0_24px_45px_-18px_rgba(0,0,0,.6)]">
             <div className="water-hunt-screen relative aspect-[9/18.7] overflow-hidden rounded-[18px]" role="img" aria-label="Looping Water Hunt preview with koi swimming through sunlit turquoise water">
-              <Image src="/images/water-hunt/caustic-water.png" alt="" fill sizes="(max-width: 560px) 40vw, 240px" className="water-hunt-texture" priority />
+              <Image src="/images/water-hunt/caustic-water.webp" alt="" fill sizes="(max-width: 560px) 40vw, 240px" className="water-hunt-texture" priority />
               <div className="water-hunt-caustics" aria-hidden="true" />
               <div className="water-hunt-fish water-hunt-fish--koi-one" aria-hidden="true">
-                <Image src="/images/water-hunt/koi-sanke.png" alt="" fill sizes="(max-width: 560px) 18vw, 90px" className="object-contain" priority />
+                <Image src="/images/water-hunt/koi-sanke.webp" alt="" fill sizes="(max-width: 560px) 18vw, 90px" className="object-contain" priority />
               </div>
               <div className="water-hunt-fish water-hunt-fish--koi-two" aria-hidden="true">
-                <Image src="/images/water-hunt/koi-sanke.png" alt="" fill sizes="(max-width: 560px) 18vw, 90px" className="object-contain" />
+                <Image src="/images/water-hunt/koi-sanke.webp" alt="" fill sizes="(max-width: 560px) 18vw, 90px" className="object-contain" />
               </div>
               <div className="water-hunt-fish water-hunt-fish--goldfish" aria-hidden="true">
-                <Image src="/images/water-hunt/goldfish.png" alt="" fill sizes="(max-width: 560px) 18vw, 90px" className="object-contain" />
+                <Image src="/images/water-hunt/goldfish.webp" alt="" fill sizes="(max-width: 560px) 18vw, 90px" className="object-contain" />
               </div>
               <svg className="water-hunt-mibbles" viewBox="0 0 240 250" aria-hidden="true">
                 <path d="M150 275 C132 234 74 205 72 158 C70 118 103 87 139 92" fill="none" stroke="#080b10" strokeWidth="76" strokeLinecap="round" />
@@ -106,7 +106,7 @@ export default function DownloadPage() {
           </div>
           <div className="absolute -bottom-[2%] -right-[16%] z-0 h-[62%] w-[86%] overflow-hidden [mask-image:radial-gradient(ellipse_at_66%_68%,black_38%,transparent_76%)]">
             <Image
-              src="/images/cats/cat-cam.png"
+              src="/images/cats/cat-cam.webp"
               alt="A curious cat reaching toward Mibbles"
               fill
               sizes="(max-width: 560px) 78vw, 440px"

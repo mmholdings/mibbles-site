@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2 max-w-md">
             <Image
-              src="/images/mibbles-wordmark.png"
+              src="/images/mibbles-wordmark.webp"
               alt="Mibbles"
               width={1987}
               height={607}

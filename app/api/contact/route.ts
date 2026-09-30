@@ -26,8 +26,9 @@ export async function POST(req: Request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          // Keep the verified sending identity for deliverability; the inbox and every public contact link use Gmail.
           from: "Mibbles Contact <hello@mibbles.app>",
-          to: "hello@mibbles.app",
+          to: "mibblesapp@gmail.com",
           reply_to: data.email,
           subject: `[Contact] ${data.subject}`,
           text: `From: ${data.name} <${data.email}>\n\n${data.message}`,

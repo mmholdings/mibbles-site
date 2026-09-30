@@ -1,7 +1,6 @@
 # Mibbles Press Kit
 
-This folder is what `/press` exposes to journalists, bloggers, and partners. Drop your real
-assets in here, then run `pnpm package:press-kit` to (re)build the master ZIP.
+This folder is what `/press` exposes to journalists, bloggers, and partners. Run `npm run package:press-kit` to rebuild the master ZIP after changing assets.
 
 ## Folder structure
 
@@ -17,16 +16,16 @@ public/press-kit/
 │   ├── logo-monogram-light.svg
 │   └── (PNG fallbacks)
 ├── app-icon.png                ← 1024×1024
-├── screenshots-iphone/         ← iPhone 15 Pro screenshots (1290×2796)
-├── screenshots-ipad/           ← iPad screenshots (2048×2732)
-├── founder-headshots/          ← high-res portraits
+├── screenshots-iphone.zip      ← 10 high-resolution iPhone JPGs (1320×2868)
+├── screenshots-ipad.zip        ← 10 high-resolution iPad JPGs (2064×2752)
+├── founder-headshots.zip       ← founders photo
 └── brand-colors.txt            ← hex codes for reference
 ```
 
 ## When you update assets
 
-1. Drop the new files into the relevant subfolder.
-2. Run `pnpm package:press-kit` from the repo root.
+1. Replace the relevant ZIP or source asset.
+2. Run `npm run package:press-kit` from the repo root.
 3. Commit and deploy.
 
 ## Brand colors

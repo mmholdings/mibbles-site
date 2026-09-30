@@ -15,9 +15,9 @@ export const siteConfig = {
   },
   author: {
     name: "The Mibbles Team",
-    email: "hello@mibbles.app",
-    press: "press@mibbles.app",
-    support: "support@mibbles.app",
+    email: "mibblesapp@gmail.com",
+    press: "mibblesapp@gmail.com",
+    support: "mibblesapp@gmail.com",
   },
   links: {
     tiktok: "https://tiktok.com/@mibblescat",

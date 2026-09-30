@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowDownRight, ArrowUpRight, Globe2, Link2, LockKeyhole, MoreHorizontal } from "lucide-react";
+import { ArrowUpRight, Globe2, Link2, LockKeyhole, MoreHorizontal, Signal } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -15,19 +15,13 @@ export default function TikTokDownloadPage() {
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,#fff0c8_0%,rgba(255,253,247,0)_48%),linear-gradient(180deg,#fffdf7,#fffdf8)]" />
       <div className="relative mx-auto w-full max-w-[460px] sm:rounded-[46px] sm:border-[8px] sm:border-[#171719] sm:bg-[#fffdf7] sm:px-2 sm:pb-7 sm:shadow-[0_35px_80px_-35px_rgba(0,0,0,.45)]">
         <header className="relative z-10 flex items-center justify-center gap-2 pt-1">
-          <Image src="/images/mibbles-wordmark.png" alt="Mibbles" width={1987} height={607} priority className="h-[27px] w-auto" />
+          <Image src="/images/mibbles-wordmark.webp" alt="Mibbles" width={1987} height={607} priority className="h-[27px] w-auto" />
           <span className="mt-1 text-[12px] font-semibold text-[#56544f]">@mibblescat</span>
         </header>
 
         <section className="relative mx-auto mt-1 aspect-[1.05] max-w-[420px] overflow-hidden rounded-t-[28px] bg-[radial-gradient(circle_at_78%_10%,#d8f8ec_0%,#effcf6_43%,#fff8e9_100%)] text-center" aria-label="Mibbles TikTok download guide">
           <div className="absolute inset-x-0 top-0 h-[48%] overflow-hidden" aria-hidden="true">
-            <svg className="downloads-mibbles-wiggle absolute inset-0 h-full w-full" viewBox="0 0 420 200" preserveAspectRatio="xMidYMid slice">
-              <path d="M482 -82 C393 -51 434 30 353 35 C267 41 258 91 308 105 C351 117 285 169 244 132" fill="none" stroke="#08090b" strokeWidth="78" strokeLinecap="round" />
-              <circle cx="236" cy="123" r="6.2" fill="white" />
-              <circle cx="253" cy="135" r="6.2" fill="white" />
-            </svg>
-            <span className="absolute left-[8%] top-[22%] h-2 w-6 rotate-[-35deg] rounded-full bg-[#ffd153]" />
-            <span className="absolute left-[11%] top-[32%] h-2 w-4 rotate-[18deg] rounded-full bg-[#ffd153]" />
+            <Image src="/images/mibbles-loop.gif" alt="" fill unoptimized sizes="(max-width: 460px) 100vw, 420px" className="object-cover object-center" />
           </div>
           <div className="absolute inset-x-0 bottom-0 top-[42%] rounded-t-[30px] bg-[#fffdf7] shadow-[0_-8px_24px_-18px_rgba(0,0,0,.3)]" />
           <div className="absolute inset-x-3 top-[49%]">
@@ -46,12 +40,11 @@ export default function TikTokDownloadPage() {
               <p className="text-[16px] font-bold leading-tight min-[390px]:text-[18px]">Tap the ··· menu</p>
               <p className="mt-1 text-[14px] leading-tight text-[#686b75]">in the top right corner</p>
               <div className="relative mt-3 h-[94px] overflow-hidden rounded-t-[20px] bg-[linear-gradient(180deg,#f6f4fc,#f0eff8)]">
-                <div className="absolute left-[12%] top-4 h-[135px] w-[105%] rotate-[-4deg] rounded-t-[48px] border-[8px] border-[#272729] bg-white shadow-[0_6px_20px_rgba(0,0,0,.15)]">
+                <div className="absolute left-[8%] top-4 h-[135px] w-[112%] rounded-t-[38px] border-[8px] border-[#272729] bg-white shadow-[0_6px_20px_rgba(0,0,0,.15)]">
                   <span className="absolute left-5 top-4 text-[11px] font-semibold text-[#b3b4ba]">9:41</span>
-                  <span className="absolute right-[76px] top-4 text-[11px] font-bold text-[#34353a]">▂▄▆ 5G</span>
-                  <span className="absolute right-5 top-0 flex h-12 w-12 items-center justify-center rounded-full border-[4px] border-[#f16b83] bg-white text-[#15161a] shadow-sm"><MoreHorizontal size={25} strokeWidth={3} /></span>
+                  <span className="absolute right-[82px] top-4 flex items-center gap-1 text-[11px] font-bold text-[#34353a]"><Signal size={16} strokeWidth={2.5} /> 5G</span>
+                  <span className="absolute right-5 top-1 flex h-12 w-12 items-center justify-center rounded-full border-[4px] border-[#f16b83] bg-white text-[#15161a] shadow-sm"><MoreHorizontal size={27} strokeWidth={3.2} /></span>
                 </div>
-                <ArrowDownRight className="absolute right-[63px] top-0 z-10 rotate-[-9deg] text-[#f16b83]" size={47} strokeWidth={3.5} />
               </div>
             </div>
           </div>

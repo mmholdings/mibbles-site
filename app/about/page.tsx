@@ -34,7 +34,7 @@ export default function AboutPage() {
           </h1>
           <div className="relative mt-8 aspect-[1.3/1] overflow-hidden rounded-[2rem] bg-cream-200 shadow-soft sm:aspect-[1.6/1]">
             <Image
-              src="/images/suki-origin.png"
+              src="/images/suki-origin.webp"
               alt="Suki relaxing in a sunny window"
               fill
               priority
@@ -75,24 +75,37 @@ export default function AboutPage() {
 
       <Section className="overflow-hidden bg-cream-200 pb-0">
         <Container size="md">
-          <Eyebrow>Our team</Eyebrow>
-          <h2 className="mt-3 mb-5 font-serif text-3xl text-balance md:text-4xl">
-            Just a tiny team of Cat Lovers
-          </h2>
-          <p className="max-w-3xl text-ink-700 leading-relaxed mb-4">
-            Mibbles is run by our small team based in Florida. We&apos;ve shipped
-            at a handful of small startups you&apos;ve probably never heard of. We
-            combined our passion in business, healthcare and our love for animals
-            to create Mibbles. We are working hard to improve, and make Mibbles
-            more stimulating for cats every day.
-          </p>
-          <p className="text-ink-700 leading-relaxed">
-            Reach out at{" "}
-            <a href="mailto:hello@mibbles.app" className="text-terracotta-700 underline underline-offset-4">
-              hello@mibbles.app
-            </a>
-            .
-          </p>
+          <div className="grid items-center gap-8 md:grid-cols-[1fr_280px] md:gap-12">
+            <div>
+              <Eyebrow>Our team</Eyebrow>
+              <h2 className="mt-3 mb-5 font-serif text-3xl text-balance md:text-4xl">
+                Just a tiny team of Cat Lovers
+              </h2>
+              <p className="max-w-3xl text-ink-700 leading-relaxed mb-4">
+                Mibbles is run by our small team based in Florida. We&apos;ve shipped
+                at a handful of small startups you&apos;ve probably never heard of. We
+                combined our passion in business, healthcare and our love for animals
+                to create Mibbles. We are working hard to improve, and make Mibbles
+                more stimulating for cats every day.
+              </p>
+              <p className="text-ink-700 leading-relaxed">
+                Reach out at{" "}
+                <a href="mailto:mibblesapp@gmail.com" className="text-terracotta-700 underline underline-offset-4">
+                  mibblesapp@gmail.com
+                </a>
+                .
+              </p>
+            </div>
+            <div className="relative mx-auto aspect-[4/3] w-full max-w-[320px] overflow-hidden rounded-3xl bg-cream-50 shadow-soft">
+              <Image
+                src="/images/founder-team.webp"
+                alt="The Mibbles co-founders"
+                fill
+                sizes="(max-width: 768px) 80vw, 320px"
+                className="object-cover"
+              />
+            </div>
+          </div>
         </Container>
 
       </Section>

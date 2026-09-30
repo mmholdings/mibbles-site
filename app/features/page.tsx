@@ -29,7 +29,7 @@ const features = [
       "5- and 10-minute sessions included",
       "Longer and unlimited sessions with Premium",
     ],
-    screenshot: "/images/features/new-hunt.png",
+    screenshot: "/images/features/new-hunt.webp",
     imageAlt: "A cat reaching to play Mibbles games on a tablet",
     imageWidth: 1318,
     imageHeight: 2140,
@@ -46,7 +46,7 @@ const features = [
       "Simple speed and session controls",
       "AI Adaptive is included with Premium",
     ],
-    screenshot: "/images/features/ai-adaptive.png",
+    screenshot: "/images/features/ai-adaptive.webp",
     imageAlt: "Mibbles AI Adaptive learning a cat's preferred prey and speed",
     imageWidth: 1320,
     imageHeight: 2868,
@@ -63,7 +63,7 @@ const features = [
       "Favorite games and heart ratings",
       "Multiple profiles with Premium",
     ],
-    screenshot: "/images/features/progress.png",
+    screenshot: "/images/features/progress.webp",
     imageAlt: "A cat exploring its Mibbles wellness and play progress",
     imageWidth: 1316,
     imageHeight: 2163,
@@ -80,7 +80,7 @@ const features = [
       "Organized by the game your cat played",
       "One-tap replay and sharing",
     ],
-    screenshot: "/images/features/reactions.png",
+    screenshot: "/images/features/reactions.webp",
     imageAlt: "A cat watching a saved reaction clip in Mibbles",
     imageWidth: 1319,
     imageHeight: 2185,
@@ -119,7 +119,7 @@ export default function FeaturesPage() {
             <div className="relative mx-auto w-full max-w-sm lg:col-span-5">
               <div className="absolute inset-10 -z-10 rounded-full bg-terracotta-100 blur-3xl" />
               <Image
-                src="/images/features/hero.png"
+                src="/images/features/hero.webp"
                 alt="A cat playing Mibbles on a phone with its human"
                 width={1320}
                 height={2115}

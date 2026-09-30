@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Download, Mail, ExternalLink } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import { Container, Section, Eyebrow } from "@/components/ui/container";
 import { Card } from "@/components/ui/card";
 import { BreadcrumbSchema } from "@/components/seo/json-ld";
@@ -17,16 +17,16 @@ export const metadata: Metadata = {
 };
 
 const oneLiner =
-  "Mibbles is the iOS app for cat mental health, enrichment, and wellness — Cat TV, Cat Cam, and science-backed insights, built with feline behaviorists.";
+  "Mibbles is an iOS app for cat enrichment and wellbeing, with interactive play, Cat TV, Cat Cam, and simple ways to follow a cat’s play.";
 
-const boilerplate = `Mibbles is the iOS app for cat mental wellness. Founded in 2024 and based in Brooklyn, New York, Mibbles combines feline behavioral research with a calm, modern app experience to help indoor cats live richer mental lives. Core features include Cat TV (full-screen visual and audio enrichment), Cat Cam (a private camera for remote check-ins), and personalized wellness insights. Mibbles is built with input from certified cat behavior consultants and is available on the App Store with a 7-day free trial.`;
+const boilerplate = `Mibbles started in a small apartment with a bored cat named Suki. Her humans worked long hours, and the closest thing to enrichment was a cat toy wand they were always too tired to use. There had to be a better way. We’re building Mibbles to close that gap and turn the best of feline welfare research into something a cat parent can use in 30 seconds on a weekday morning.`;
 
 const assets = [
   {
     title: "Complete press kit (ZIP)",
-    description: "Logos, app icon, screenshots, brand colors, founder photos.",
+    description: "Logos, app icon, screenshots, brand colors, and a founders photo.",
     href: "/press-kit/mibbles-press-kit.zip",
-    type: "ZIP · ~15 MB",
+    type: "ZIP · 24 MB",
   },
   {
     title: "Logo pack",
@@ -38,55 +38,25 @@ const assets = [
     title: "App icon",
     description: "1024×1024 PNG.",
     href: "/press-kit/app-icon.png",
-    type: "PNG · 200 KB",
+    type: "PNG · 813 KB",
   },
   {
     title: "iPhone screenshots",
-    description: "6 screenshots, 1290×2796.",
+    description: "10 high-resolution JPGs, 1320×2868.",
     href: "/press-kit/screenshots-iphone.zip",
     type: "ZIP · 8 MB",
   },
   {
     title: "iPad screenshots",
-    description: "4 screenshots, 2048×2732.",
+    description: "10 high-resolution JPGs, 2064×2752.",
     href: "/press-kit/screenshots-ipad.zip",
-    type: "ZIP · 6 MB",
+    type: "ZIP · 11 MB",
   },
   {
-    title: "Founder headshots",
-    description: "High-res, on-brand portraits.",
+    title: "Founders photo",
+    description: "High-resolution photo of the Mibbles co-founders.",
     href: "/press-kit/founder-headshots.zip",
-    type: "ZIP · 3 MB",
-  },
-];
-
-const featuredIn = [
-  "The Spruce Pets",
-  "Catster",
-  "Modern Cat",
-  "Product Hunt",
-  "9to5Mac",
-  "App Store Today",
-];
-
-const recentMentions = [
-  {
-    publication: "The Spruce Pets",
-    title: "The 7 Best Apps for Indoor Cats in 2026",
-    url: "#",
-    date: "Mar 2026",
-  },
-  {
-    publication: "Catster",
-    title: "Can Cat TV Actually Help an Anxious Cat?",
-    url: "#",
-    date: "Feb 2026",
-  },
-  {
-    publication: "Product Hunt",
-    title: "#3 Product of the Day — Mibbles launch",
-    url: "#",
-    date: "Jan 2026",
+    type: "ZIP · 1.7 MB",
   },
 ];
 
@@ -113,10 +83,10 @@ export default function PressPage() {
             Everything you need to write about Mibbles.
           </h1>
           <p className="text-xl text-ink-600 max-w-prose leading-snug">
-            Logos, screenshots, brand colors, boilerplate, and founder photos —
+            Logos, screenshots, brand colors, boilerplate, and a founders photo —
             all in one place. For press inquiries, email{" "}
-            <a href="mailto:press@mibbles.app" className="text-terracotta-700 underline underline-offset-4">
-              press@mibbles.app
+            <a href="mailto:mibblesapp@gmail.com" className="text-terracotta-700 underline underline-offset-4">
+              mibblesapp@gmail.com
             </a>
             .
           </p>
@@ -186,48 +156,6 @@ export default function PressPage() {
         </Container>
       </Section>
 
-      {/* Featured in */}
-      <Section className="bg-cream-200">
-        <Container size="md">
-          <Eyebrow>Featured in</Eyebrow>
-          <div className="mt-8 flex flex-wrap items-center gap-x-12 gap-y-4">
-            {featuredIn.map((p) => (
-              <span key={p} className="font-serif text-xl text-ink-500">
-                {p}
-              </span>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* Recent mentions */}
-      <Section>
-        <Container size="md">
-          <Eyebrow>Recent press</Eyebrow>
-          <h2 className="font-serif text-display-lg mt-5 mb-10">In the news.</h2>
-          <ul className="divide-y divide-ink-100 border-y border-ink-100">
-            {recentMentions.map((m) => (
-              <li key={m.title}>
-                <a
-                  href={m.url}
-                  target="_blank"
-                  rel="noopener"
-                  className="group flex items-center justify-between gap-6 py-6 hover:text-terracotta-700"
-                >
-                  <div>
-                    <div className="text-sm text-ink-500">{m.publication} · {m.date}</div>
-                    <div className="font-serif text-xl text-ink-900 group-hover:text-terracotta-700">
-                      {m.title}
-                    </div>
-                  </div>
-                  <ExternalLink className="h-5 w-5 text-ink-400 shrink-0" />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </Section>
-
       {/* Press contact */}
       <Section>
         <Container size="md">
@@ -238,10 +166,10 @@ export default function PressPage() {
               Same-day response, weekdays Eastern Time.
             </p>
             <a
-              href="mailto:press@mibbles.app"
+              href="mailto:mibblesapp@gmail.com"
               className="inline-flex items-center mt-6 text-cream underline underline-offset-4 hover:text-terracotta-300"
             >
-              press@mibbles.app
+              mibblesapp@gmail.com
             </a>
           </div>
         </Container>

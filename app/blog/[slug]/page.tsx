@@ -9,6 +9,7 @@ import { Newsletter } from "@/components/marketing/newsletter";
 import { TableOfContents } from "@/components/blog/table-of-contents";
 import { ShareButtons } from "@/components/blog/share-buttons";
 import { PostCard } from "@/components/blog/post-card";
+import { BlogCoverArt } from "@/components/blog/blog-cover-art";
 import { ExitIntentModal } from "@/components/blog/exit-intent-modal";
 import { AppStoreCTACard } from "@/components/blog/app-store-cta-card";
 import { mdxComponents } from "@/components/blog/mdx-components";
@@ -128,12 +129,9 @@ export default function PostPage({ params }: Params) {
       </header>
 
       <Container className="mt-12 md:mt-16">
-        <div
-          className="aspect-[16/9] md:aspect-[21/9] rounded-3xl bg-cover bg-center bg-cream-200"
-          style={{ backgroundImage: `url(${heroImage})` }}
-          aria-label={post.heroImageAlt ?? post.title}
-          role="img"
-        />
+        <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-3xl bg-cream-200">
+          <BlogCoverArt slug={post.slug} title={post.title} className="h-full w-full" />
+        </div>
       </Container>
 
       {/* BODY */}

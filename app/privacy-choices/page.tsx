@@ -52,7 +52,7 @@ export default function PrivacyChoicesPage() {
             identity. We will not discriminate against you for making a request.
           </p>
           <a
-            href="mailto:privacy@mibbles.app?subject=Mibbles%20Privacy%20Request"
+            href="mailto:mibblesapp@gmail.com?subject=Mibbles%20Privacy%20Request"
             className="not-prose mt-5 inline-flex h-12 items-center gap-2 rounded-full bg-ink-900 px-6 font-medium text-cream no-underline hover:bg-ink-700"
           >
             Submit a privacy request <ArrowRight className="h-4 w-4" />

@@ -124,7 +124,7 @@ export default function TermsPage() {
           <h2>Contact</h2>
           <p>
             Questions about these terms can be sent to{" "}
-            <a href="mailto:support@mibbles.app">support@mibbles.app</a>.
+            <a href="mailto:mibblesapp@gmail.com">mibblesapp@gmail.com</a>.
           </p>
         </div>
       </Container>

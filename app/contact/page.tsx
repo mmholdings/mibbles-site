@@ -45,20 +45,20 @@ export default function ContactPage() {
             <div className="space-y-6 text-ink-700">
               <div>
                 <div className="text-sm uppercase tracking-widest text-ink-500 mb-1">General</div>
-                <a href="mailto:hello@mibbles.app" className="text-lg underline underline-offset-4 hover:text-terracotta-700">
-                  hello@mibbles.app
+                <a href="mailto:mibblesapp@gmail.com" className="text-lg underline underline-offset-4 hover:text-terracotta-700">
+                  mibblesapp@gmail.com
                 </a>
               </div>
               <div>
                 <div className="text-sm uppercase tracking-widest text-ink-500 mb-1">Support</div>
-                <a href="mailto:support@mibbles.app" className="text-lg underline underline-offset-4 hover:text-terracotta-700">
-                  support@mibbles.app
+                <a href="mailto:mibblesapp@gmail.com" className="text-lg underline underline-offset-4 hover:text-terracotta-700">
+                  mibblesapp@gmail.com
                 </a>
               </div>
               <div>
                 <div className="text-sm uppercase tracking-widest text-ink-500 mb-1">Press</div>
-                <a href="mailto:press@mibbles.app" className="text-lg underline underline-offset-4 hover:text-terracotta-700">
-                  press@mibbles.app
+                <a href="mailto:mibblesapp@gmail.com" className="text-lg underline underline-offset-4 hover:text-terracotta-700">
+                  mibblesapp@gmail.com
                 </a>
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function ContactPage() {
               <p className="text-sm text-terracotta-700">Got it. We&apos;ll reply soon.</p>
             )}
             {status === "error" && (
-              <p className="text-sm text-terracotta-700">Something went wrong — try emailing hello@mibbles.app directly.</p>
+              <p className="text-sm text-terracotta-700">Something went wrong — try emailing mibblesapp@gmail.com directly.</p>
             )}
             {formState.errors && Object.keys(formState.errors).length > 0 && (
               <p className="text-xs text-ink-500">Please fill in all required fields.</p>

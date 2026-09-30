@@ -95,7 +95,7 @@ export default function PrivacyPage() {
             Settings → Account → Delete Account. Deleting the app does not cancel an
             Apple subscription; subscriptions can be managed in your Apple ID
             settings. To request deletion of newsletter, support, or other website
-            information, email <a href="mailto:privacy@mibbles.app">privacy@mibbles.app</a>.
+            information, email <a href="mailto:mibblesapp@gmail.com">mibblesapp@gmail.com</a>.
             We retain information only as long as reasonably necessary for the uses
             described here and for legal, security, or accounting obligations.
           </p>
@@ -141,7 +141,7 @@ export default function PrivacyPage() {
           <h2>Contact</h2>
           <p>
             Questions or privacy requests can be sent to{" "}
-            <a href="mailto:privacy@mibbles.app">privacy@mibbles.app</a>.
+            <a href="mailto:mibblesapp@gmail.com">mibblesapp@gmail.com</a>.
           </p>
         </div>
       </Container>

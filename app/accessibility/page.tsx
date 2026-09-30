@@ -41,8 +41,8 @@ export default function AccessibilityPage() {
           <h2>Feedback and assistance</h2>
           <p>
             If you encounter a barrier or need information in another format, email{" "}
-            <a href="mailto:support@mibbles.app?subject=Accessibility%20Feedback">
-              support@mibbles.app
+            <a href="mailto:mibblesapp@gmail.com?subject=Accessibility%20Feedback">
+              mibblesapp@gmail.com
             </a>. Please include the page or feature, what happened, and the assistive
             technology or browser you were using if you are comfortable sharing it.
             We will review the issue and work toward a reasonable solution.

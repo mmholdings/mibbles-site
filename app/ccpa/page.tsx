@@ -81,7 +81,7 @@ export default function CCPAPage() {
           <p>
             We will not discriminate against you for exercising a privacy right. See{" "}
             <a href="/privacy-choices">Your Privacy Choices</a> or email{" "}
-            <a href="mailto:privacy@mibbles.app">privacy@mibbles.app</a> to submit a request.
+            <a href="mailto:mibblesapp@gmail.com">mibblesapp@gmail.com</a> to submit a request.
           </p>
 
           <h2>Verification and authorized agents</h2>
@@ -95,7 +95,7 @@ export default function CCPAPage() {
           <h2>Contact</h2>
           <p>
             Questions about this notice can be sent to{" "}
-            <a href="mailto:privacy@mibbles.app">privacy@mibbles.app</a>.
+            <a href="mailto:mibblesapp@gmail.com">mibblesapp@gmail.com</a>.
           </p>
         </div>
       </Container>

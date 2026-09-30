@@ -157,7 +157,7 @@ export default function PricingPage() {
           <div className="mt-12 grid gap-5 lg:grid-cols-12">
             <div className="group relative min-h-[520px] overflow-hidden rounded-[2rem] bg-cream lg:col-span-7">
               <Image
-                src="/images/benefits/cat-playing.png"
+                src="/images/benefits/cat-playing.webp"
                 alt="A cat engaging with Mibbles on a tablet"
                 fill
                 className="object-cover object-center transition duration-700 group-hover:scale-[1.02]"
@@ -183,7 +183,7 @@ export default function PricingPage() {
               </div>
               <div className="relative min-h-64 overflow-hidden rounded-[2rem] bg-[#fff2e9]">
                 <Image
-                  src="/images/benefits/cat-reaction.png"
+                  src="/images/benefits/cat-reaction.webp"
                   alt="A happy cat reacting during play"
                   fill
                   className="object-cover object-center"
