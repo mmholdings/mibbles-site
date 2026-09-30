@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowUpRight, Globe2, Link2, LockKeyhole, MoreHorizontal, Signal } from "lucide-react";
+import { ArrowUpRight, Globe2, Link2, LockKeyhole, MoreHorizontal } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -39,12 +39,18 @@ export default function TikTokDownloadPage() {
             <div className="min-w-0 flex-1 pt-1">
               <p className="text-[16px] font-bold leading-tight min-[390px]:text-[18px]">Tap the ··· menu</p>
               <p className="mt-1 text-[14px] leading-tight text-[#686b75]">in the top right corner</p>
-              <div className="relative mt-3 h-[94px] overflow-hidden rounded-t-[20px] bg-[linear-gradient(180deg,#f6f4fc,#f0eff8)]">
-                <div className="absolute left-[8%] top-4 h-[135px] w-[112%] rounded-t-[38px] border-[8px] border-[#272729] bg-white shadow-[0_6px_20px_rgba(0,0,0,.15)]">
+              <div className="relative mt-3 h-[112px] overflow-hidden rounded-[20px] bg-[linear-gradient(180deg,#f6f4fc,#f0eff8)]">
+                <div className="absolute inset-x-4 top-5 h-[150px] rounded-t-[38px] border-[7px] border-[#272729] bg-white shadow-[0_6px_20px_rgba(0,0,0,.15)]">
                   <span className="absolute left-5 top-4 text-[11px] font-semibold text-[#b3b4ba]">9:41</span>
-                  <span className="absolute right-[82px] top-4 flex items-center gap-1 text-[11px] font-bold text-[#34353a]"><Signal size={16} strokeWidth={2.5} /> 5G</span>
-                  <span className="absolute right-5 top-1 flex h-12 w-12 items-center justify-center rounded-full border-[4px] border-[#f16b83] bg-white text-[#15161a] shadow-sm"><MoreHorizontal size={27} strokeWidth={3.2} /></span>
+                  <span className="absolute right-[72px] top-[19px] text-[11px] font-bold text-[#34353a]">5G</span>
+                  <span className="absolute right-3 top-2 flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-[#f16b83] bg-white text-[#15161a] shadow-sm">
+                    <MoreHorizontal size={27} strokeWidth={3.2} />
+                  </span>
                 </div>
+                <svg aria-hidden="true" viewBox="0 0 46 38" className="absolute right-[47px] top-[7px] z-10 h-[38px] w-[46px] overflow-visible text-[#f16b83]">
+                  <path d="M2 3C16 1 17 10 24 18c4 5 8 8 15 10" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
+                  <path d="m30 20 9 8-12 1" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </div>
             </div>
           </div>
