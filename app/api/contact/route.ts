@@ -3,7 +3,7 @@ import { z } from "zod";
 
 const schema = z.object({
   name: z.string().min(1).max(100),
-  email: z.string().email(),
+  email: z.string().email().optional(),
   subject: z.string().min(1).max(200),
   message: z.string().min(10).max(5000),
   hp: z.string().max(0).optional(), // honeypot
@@ -19,7 +19,7 @@ export async function POST(req: Request) {
 
     const apiKey = process.env.RESEND_API_KEY;
     if (apiKey) {
-      await fetch("https://api.resend.com/emails", {
+      const response = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${apiKey}`,
@@ -29,12 +29,19 @@ export async function POST(req: Request) {
           // Keep the verified sending identity for deliverability; the inbox and every public contact link use Gmail.
           from: "Mibbles Contact <hello@mibbles.app>",
           to: "mibblesapp@gmail.com",
-          reply_to: data.email,
+          ...(data.email ? { reply_to: data.email } : {}),
           subject: `[Contact] ${data.subject}`,
-          text: `From: ${data.name} <${data.email}>\n\n${data.message}`,
+          text: `From: ${data.name}${data.email ? ` <${data.email}>` : ""}\n\n${data.message}`,
         }),
       });
+      if (!response.ok) {
+        console.error("[contact:email] Resend rejected the message", response.status);
+        return new NextResponse("Email delivery failed", { status: 502 });
+      }
     } else {
+      if (process.env.NODE_ENV === "production") {
+        return new NextResponse("Email delivery is not configured", { status: 503 });
+      }
       console.log("[contact:dev]", data);
     }
 
