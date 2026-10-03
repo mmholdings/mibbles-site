@@ -3,8 +3,19 @@ import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Newsletter } from "@/components/marketing/newsletter";
 import { siteConfig } from "@/lib/site-config";
+import { headers } from "next/headers";
+import { isLocale, messages } from "@/lib/i18n/site";
 
 export function Footer() {
+  const localeHeader = headers().get("x-mibbles-locale") ?? "en";
+  const localized = isLocale(localeHeader) ? messages[localeHeader] : null;
+  const localizedHeadings = localized
+    ? localeHeader === "de" ? ["Produkt", "Ressourcen", "Unternehmen", "Recht & Datenschutz"]
+      : localeHeader === "fr" ? ["Produit", "Ressources", "Entreprise", "Juridique et confidentialité"]
+      : localeHeader === "es-419" ? ["Producto", "Recursos", "Empresa", "Legal y privacidad"]
+      : localeHeader === "pt-BR" ? ["Produto", "Recursos", "Empresa", "Jurídico e privacidade"]
+      : ["製品", "リソース", "会社情報", "法務・プライバシー"]
+    : siteConfig.footerSections.map((section) => section.title);
   return (
     <footer className="border-t border-ink-100 bg-cream mt-24">
       <Container className="py-16 md:py-20">
@@ -18,27 +29,36 @@ export function Footer() {
               className="mb-5 h-12 w-auto"
             />
             <p className="text-ink-600 leading-relaxed mb-6">
-              {siteConfig.description}
+              {localized?.home.body ?? siteConfig.description}
             </p>
             <Newsletter source="footer" />
           </div>
 
-          {siteConfig.footerSections.map((section) => (
+          {siteConfig.footerSections.map((section, sectionIndex) => (
             <div key={section.title}>
               <h3 className="font-sans text-xs uppercase tracking-[0.15em] text-ink-500 mb-4">
-                {section.title}
+                {localizedHeadings[sectionIndex]}
               </h3>
               <ul className="space-y-3">
-                {section.links.map((link) => (
+                {section.links.map((link) => {
+                  const localizedHref = localized && ["/features", "/pricing", "/download", "/about"].includes(link.href)
+                    ? `/${localeHeader}${link.href}`
+                    : link.href;
+                  const localizedLabel = localized && link.href === "/features" ? localized.nav[0]
+                    : localized && link.href === "/pricing" ? localized.nav[1]
+                    : localized && link.href === "/download" ? localized.nav[4]
+                    : localized && link.href === "/about" ? localized.nav[3]
+                    : link.label;
+                  return (
                   <li key={link.label}>
                     <Link
-                      href={link.href}
+                      href={localizedHref}
                       className="text-[15px] text-ink-700 hover:text-terracotta-700 transition-colors"
                     >
-                      {link.label}
+                      {localizedLabel}
                     </Link>
                   </li>
-                ))}
+                );})}
               </ul>
             </div>
           ))}

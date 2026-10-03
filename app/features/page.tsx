@@ -31,8 +31,8 @@ const features = [
     ],
     screenshot: "/images/features/new-hunt.webp",
     imageAlt: "A cat reaching to play Mibbles games on a tablet",
-    imageWidth: 1318,
-    imageHeight: 2140,
+    imageWidth: 900,
+    imageHeight: 1462,
     tone: "bg-[#edf9f1]",
   },
   {
@@ -48,8 +48,8 @@ const features = [
     ],
     screenshot: "/images/features/ai-adaptive.webp",
     imageAlt: "Mibbles AI Adaptive learning a cat's preferred prey and speed",
-    imageWidth: 1320,
-    imageHeight: 2868,
+    imageWidth: 900,
+    imageHeight: 1956,
     tone: "bg-[#f4efff]",
   },
   {
@@ -65,8 +65,8 @@ const features = [
     ],
     screenshot: "/images/features/progress.webp",
     imageAlt: "A cat exploring its Mibbles wellness and play progress",
-    imageWidth: 1316,
-    imageHeight: 2163,
+    imageWidth: 900,
+    imageHeight: 1480,
     tone: "bg-[#f7f4e9]",
   },
   {
@@ -82,8 +82,8 @@ const features = [
     ],
     screenshot: "/images/features/reactions.webp",
     imageAlt: "A cat watching a saved reaction clip in Mibbles",
-    imageWidth: 1319,
-    imageHeight: 2185,
+    imageWidth: 900,
+    imageHeight: 1491,
     tone: "bg-[#edf8f8]",
   },
 ];
@@ -121,9 +121,10 @@ export default function FeaturesPage() {
               <Image
                 src="/images/features/hero.webp"
                 alt="A cat playing Mibbles on a phone with its human"
-                width={1320}
-                height={2115}
+                width={900}
+                height={1443}
                 priority
+                sizes="(min-width: 1024px) 384px, 90vw"
                 className="h-auto w-full rounded-[2rem] shadow-card"
               />
             </div>
@@ -163,7 +164,7 @@ export default function FeaturesPage() {
                     width={feature.imageWidth}
                     height={feature.imageHeight}
                     className="h-auto w-full rounded-2xl shadow-card"
-                    sizes="(min-width: 1024px) 42vw, 90vw"
+                    sizes="(min-width: 640px) 400px, 90vw"
                   />
                 </div>
               </div>

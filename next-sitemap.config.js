@@ -6,6 +6,12 @@ module.exports = {
   priority: 0.7,
   sitemapSize: 5000,
   exclude: ["/admin", "/admin/*", "/api/*", "/live", "/live/*", "/downloads"],
+  additionalPaths: async () => ["de", "fr", "es-419", "pt-BR", "ja"].flatMap((locale) => ["", "/features", "/pricing", "/about", "/download", "/downloads"].map((path) => ({
+    loc: `/${locale}${path}`,
+    changefreq: "weekly",
+    priority: path === "" ? 0.9 : 0.7,
+    lastmod: new Date().toISOString(),
+  }))),
   robotsTxtOptions: {
     policies: [
       { userAgent: "*", allow: "/" },

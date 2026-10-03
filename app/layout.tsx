@@ -8,6 +8,7 @@ import { SiteChrome } from "@/components/marketing/site-chrome";
 import { Analytics } from "@/components/seo/analytics";
 import { OrganizationSchema } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { headers } from "next/headers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -84,8 +85,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = headers().get("x-mibbles-locale") ?? "en";
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang={locale} className={`${inter.variable} ${fraunces.variable}`}>
       <body className="min-h-screen flex flex-col bg-cream text-ink-900">
         <OrganizationSchema />
         <SiteChrome><Nav /></SiteChrome>

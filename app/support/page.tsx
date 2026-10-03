@@ -26,9 +26,9 @@ const faqs = [
       "Some cats need a few sessions to engage. Start with the bird channel (highest engagement rate), in a quiet room, with you nearby. Cats often watch passively for 1–2 sessions before they fully tune in. Don't force it.",
   },
   {
-    question: "Cat Cam stops streaming when my iPhone screen sleeps.",
+    question: "How does Cat Cam work?",
     answer:
-      "iOS pauses most apps when the screen locks. In Settings → Display & Brightness, set Auto-Lock to Never on the device running Cat Cam. We're working on a background mode for a future update.",
+      "Cat Cam records your cat's reaction with the front-facing camera while a game is playing, then combines it with the game footage in a side-by-side Replay. It does not provide remote or live camera viewing. Recordings stay on your device unless you choose to save or share them.",
   },
   {
     question: "AirPlay isn't working with my Apple TV.",

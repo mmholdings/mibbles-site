@@ -4,6 +4,8 @@ import * as React from "react";
 import Image from "next/image";
 import { AppStoreButton } from "@/components/ui/app-store-button";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
+import { isLocale, messages } from "@/lib/i18n/site";
 
 /**
  * Sticky download bar — appears on mobile only, after the user has scrolled
@@ -11,6 +13,9 @@ import { cn } from "@/lib/utils";
  */
 export function StickyAppCTA() {
   const [visible, setVisible] = React.useState(false);
+  const pathname = usePathname();
+  const locale = pathname?.split("/")[1] ?? "";
+  const localizedCopy = isLocale(locale) ? messages[locale] : null;
 
   React.useEffect(() => {
     const handle = () => setVisible(window.scrollY > 600);
@@ -32,10 +37,10 @@ export function StickyAppCTA() {
           <Image src="/images/app-icon.webp" alt="" width={40} height={40} className="rounded-[11px]" />
           <div className="min-w-0 text-sm leading-tight">
             <div className="font-medium text-ink-900">Mibbles</div>
-            <div className="truncate text-xs text-ink-500">Mental wellness for your cat</div>
+            <div className="truncate text-xs text-ink-500">{localizedCopy?.home.title ?? "Mental wellness for your cat"}</div>
           </div>
         </div>
-        <AppStoreButton size="md" />
+        <AppStoreButton size="md" label={localizedCopy?.download.cta} />
       </div>
     </div>
   );

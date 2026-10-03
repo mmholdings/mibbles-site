@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "How does Cat Cam work?",
     answer:
-      "Cat Cam uses your iPhone's camera so you can check in on your cat from another room or remotely. It runs locally on your device — no third-party servers store the video.",
+      "Cat Cam records your cat's reaction with the front-facing camera during a game, then pairs it with the game footage in a side-by-side Replay. It's for capturing playtime, not remote or live viewing. Recordings stay on your device unless you choose to share them.",
   },
   {
     question: "Where can I download Mibbles?",
@@ -71,8 +71,8 @@ export default function HomePage() {
               </h1>
               <p className="text-xl md:text-2xl text-ink-600 max-w-prose leading-snug mb-10">
                 Mibbles is the iOS app for cat enrichment and wellbeing.
-                Cat TV that actually holds their attention, a Cat Cam so
-                you can check in, and insights drawn from real feline behavior research.
+                Cat TV that holds their attention, Cat Cam reaction replays,
+                and insights drawn from real feline behavior research.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
                 <AppStoreButton size="lg" />
@@ -117,7 +117,7 @@ export default function HomePage() {
             <FeatureCard
               icon={Camera}
               title="Cat Cam"
-              description="Turn your iPhone into a private camera. Check in from another room or across the city. No third-party servers — your video never leaves your device."
+              description="Record your cat's reaction during a game, then replay the moment side by side with the on-screen action. Cat Cam captures playtime; it is not a remote camera."
             />
             <FeatureCard
               icon={Sparkles}
@@ -196,7 +196,7 @@ export default function HomePage() {
       {/* ─────────────────────────── TESTIMONIALS ─────────────────────────── */}
       <Section>
         <Container className="mb-12 px-5 sm:px-6 lg:px-8">
-          <Eyebrow>Loved by cat parents</Eyebrow>
+          <Eyebrow>Loved by 1,500+ cat parents</Eyebrow>
           <h2 className="font-serif text-display-lg mt-5 max-w-2xl text-balance">
             What people are saying.
           </h2>

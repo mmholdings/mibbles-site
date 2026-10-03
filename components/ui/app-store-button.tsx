@@ -6,9 +6,10 @@ interface Props {
   className?: string;
   variant?: "dark" | "light";
   size?: "md" | "lg";
+  label?: string;
 }
 
-export function AppStoreButton({ className, variant = "dark", size = "md" }: Props) {
+export function AppStoreButton({ className, variant = "dark", size = "md", label }: Props) {
   const dimensions = size === "lg" ? "h-14 px-7" : "h-12 px-6";
   const colors =
     variant === "dark"
@@ -30,10 +31,10 @@ export function AppStoreButton({ className, variant = "dark", size = "md" }: Pro
       aria-label="Download Mibbles on the App Store"
     >
       <Download className="h-5 w-5" strokeWidth={1.7} />
-      <span className="text-left leading-tight">
-        <span className="block text-[10px] opacity-70">Download on the</span>
-        <span className="block text-base font-semibold tracking-tight">App Store</span>
-      </span>
+      {label ? <span className="text-sm font-semibold tracking-tight">{label}</span> : <span className="text-left leading-tight">
+          <span className="block text-[10px] opacity-70">Download on the</span>
+          <span className="block text-base font-semibold tracking-tight">App Store</span>
+        </span>}
     </a>
   );
 }

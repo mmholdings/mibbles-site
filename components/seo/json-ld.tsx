@@ -44,11 +44,6 @@ export function SoftwareApplicationSchema() {
           price: siteConfig.pricing.annual.price.replace("$", ""),
           priceCurrency: "USD",
         },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.8",
-          ratingCount: "1247",
-        },
         downloadUrl: siteConfig.appStoreUrl,
         screenshot: absoluteUrl("/screenshots/cat-mode.png"),
       }}
